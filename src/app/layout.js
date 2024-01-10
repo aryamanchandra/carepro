@@ -26,8 +26,8 @@ export default function RootLayout({ children }) {
                 <Sidebar />
               </StickyBox>
             </Grid>
-            <Grid item sx={{ width: `calc(100% - ${SIDEBAR_WIDTH})` }}>
-              <Box sx={{backgroundColor: "#F1F8FF", height:"90vh", padding:"30px"}}>
+            <Grid item sx={{ width: `calc(100% - ${SIDEBAR_WIDTH})`, backgroundColor: "#F1F8FF" }}>
+              <Box sx={{backgroundColor: "#F1F8FF", height:"100%", minHeight:"90vh", padding:"30px"}}>
               {children}
               </Box>
             </Grid>

@@ -19,7 +19,7 @@ export default function Home() {
         minHeight: "90vh",
         paddingY: "20px",
         alignItems: "flex-start",
-        paddingX: "20px",
+        paddingX: "40px",
       }}
     >
       <Box

@@ -8,7 +8,7 @@ import Appointment from "./components/Appointment";
 
 export default function Home() {
   return (
-    <Box sx={{ backgroundColor: "#F1F8FF" }}>
+    <Box sx={{ backgroundColor: "#F1F8FF", padding: "20px" }}>
       <Stack direction="row">
         <Typography variant="h6" color="primary.light">
           Dashboard
@@ -26,7 +26,16 @@ export default function Home() {
           <Activity />
           <TopList />
         </Grid>
-        <Grid item sx={{ width: "50%" }}>
+        <Grid
+          item
+          sx={{
+            width: "50%",
+            backgroundColor: "#fff",
+            paddingY: "10px",
+            paddingX: "20px",
+            borderRadius:"10px",
+          }}
+        >
           <Appointment />
         </Grid>
       </Grid>
