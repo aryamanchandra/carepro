@@ -1,10 +1,10 @@
 "use client"
 import { Inter } from "next/font/google";
-import "./globals.css";
 import { Grid, ThemeProvider } from "@mui/material";
 import { theme } from "../../style";
 import StickyBox from "react-sticky-box";
 import Sidebar from "./components/Sidebar"
+import "./globals.css"
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
                 borderRight: "2px solid #E8E8E8",
                 width: "30vh",
                 borderColor: "primary",
-                height:"100%", maxHeight:"100vh"
+                height:"100%", minHeight:"100vh"
               }}
             >
               <StickyBox >
