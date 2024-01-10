@@ -19,11 +19,12 @@ export default function RootLayout({ children }) {
               item
               sx={{
                 borderRight: "2px solid #E8E8E8",
-                width: "12vh",
+                width: "30vh",
                 borderColor: "primary",
+                height:"100%", maxHeight:"100vh"
               }}
             >
-              <StickyBox>
+              <StickyBox >
                 <Sidebar />
               </StickyBox>
             </Grid>
