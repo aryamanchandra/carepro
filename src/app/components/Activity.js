@@ -37,7 +37,6 @@ export default function Activity() {
             paddingTop: "0px",
           }}
         >
-          {/* <InputLabel id="demo-simple-select-label">Weekly</InputLabel> */}
           <Select
             labelId="demo-simple-select-label"
             id="demo-simple-select"

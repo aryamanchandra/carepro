@@ -29,12 +29,23 @@ export default function Home() {
               paddingY: "10px",
               paddingX: "20px",
               borderRadius: "10px",
-              marginRight: "40px"
+              marginRight: "40px",
             }}
           >
             <Activity />
           </Box>
-          <TopList />
+          <Box
+            sx={{
+              backgroundColor: "#fff",
+              paddingY: "10px",
+              paddingX: "20px",
+              borderRadius: "10px",
+              marginRight: "40px",
+              marginTop:"40px",
+            }}
+          >
+            <TopList />
+          </Box>
         </Grid>
         <Grid
           item
