@@ -12,7 +12,7 @@ function createData(name, calories, fat, carbs, protein) {
 }
 
 const rows = [
-  createData("9:30 AM", "Elizat*th Polson", "05/12/2022", "Doctor John"),
+  createData("9:30 AM", "Elizabeth Polson", "05/12/2022", "Doctor John"),
   createData("9:30 AM", "John David", "05/12/2022", "Doctor Joel"),
   createData("10:00 AM", "Krishtav Rajan", "05/12/2022", "Doctor Joel"),
   createData("11:30 AM", "Sumanth Tinson", "05/12/2022", "Doctor John"),

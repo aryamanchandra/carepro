@@ -9,7 +9,7 @@ import Appointment from "./components/Appointment";
 export default function Home() {
   return (
     <Box sx={{ backgroundColor: "#F1F8FF", padding: "20px" }}>
-      <Stack direction="row">
+      <Stack direction="row" marginBottom="30px">
         <Typography variant="h6" color="primary.light">
           Dashboard
         </Typography>
@@ -21,19 +21,29 @@ export default function Home() {
           </Typography>
         </Stack>
       </Stack>
-      <Grid>
-        <Grid item sx={{ width: "50%" }}>
-          <Activity />
+      <Grid container>
+        <Grid item xs={4}>
+          <Box
+            sx={{
+              backgroundColor: "#fff",
+              paddingY: "10px",
+              paddingX: "20px",
+              borderRadius: "10px",
+              marginRight: "40px"
+            }}
+          >
+            <Activity />
+          </Box>
           <TopList />
         </Grid>
         <Grid
           item
+          xs={8}
           sx={{
-            width: "50%",
             backgroundColor: "#fff",
             paddingY: "10px",
             paddingX: "20px",
-            borderRadius:"10px",
+            borderRadius: "10px",
           }}
         >
           <Appointment />
