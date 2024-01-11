@@ -1,9 +1,14 @@
 "use client";
-import * as React from "react";
+import { useState } from "react";
 import {
   Box,
   Button,
+  Divider,
+  FormControl,
   InputAdornment,
+  MenuItem,
+  Modal,
+  Select,
   Stack,
   Tab,
   Tabs,
@@ -15,8 +20,19 @@ import NotificationsIcon from "@mui/icons-material/Notifications";
 import AddIcon from "@mui/icons-material/Add";
 import SearchIcon from "@mui/icons-material/Search";
 import PatientTable from "../components/Table/PatientTable";
+import CloseIcon from '@mui/icons-material/Close';
 
 export default function Patients() {
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
+  const [time, setTime] = useState("");
+
+  const handleChange = (event) => {
+    setTime(event.target.value);
+  };
+
   return (
     <Box sx={{ backgroundColor: "#F1F8FF", padding: "20px" }}>
       <Stack direction="row" marginBottom="30px">
@@ -31,6 +47,64 @@ export default function Patients() {
           </Typography>
         </Stack>
       </Stack>
+      <Modal open={open} onClose={handleClose}>
+        <Box
+          sx={{
+            backgroundColor: "#fff",
+            borderRadius: "10px",
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            width: 500,
+            borderRadius: "10px",
+            bgcolor: "background.paper",
+            p: 5,
+          }}
+        >
+          <Stack direction="row" alignItems="center" sx={{marginBottom:"20px"}}>
+            <Typography variant="h5">Modal Title</Typography>
+            <Button sx={{marginLeft:"auto"}} onClick={handleClose} ><CloseIcon /></Button>
+          </Stack>
+          <Divider />
+          <Typography sx={{ paddingBottom: "10px", paddingTop: "20px" }}>
+            Patient&apos;s Name
+          </Typography>
+          <TextField variant="filled" fullWidth placeholder="Krishnan Murthy"></TextField>
+          <Typography sx={{ paddingBottom: "10px", paddingTop: "20px" }}>
+            Contact Number
+          </Typography>
+          <TextField variant="filled" fullWidth placeholder="+91-7004911197"></TextField>
+          <Typography sx={{ paddingBottom: "10px", paddingTop: "20px" }}>
+            Patient Type
+          </Typography>
+          <FormControl
+            variant="filled"
+            fullWidth
+            placeholder="Choose Option"
+            sx={{
+              marginTop: "0px",
+              marginLeft: "auto",
+              paddingTop: "0px",
+            }}
+          >
+            <Select
+              labelId="demo-simple-select-label"
+              id="demo-simple-select"
+              label="Choose Option"
+              value={time}
+              onChange={handleChange}
+              placeholder="Choose Option"
+              fullWidth
+            >
+              <MenuItem value={10}>Ten</MenuItem>
+              <MenuItem value={20}>Twenty</MenuItem>
+              <MenuItem value={30}>Thirty</MenuItem>
+            </Select>
+          </FormControl>
+          <Button variant="contained" fullWidth sx={{marginY:"20px", marginTop:"40px", paddingY:"10px"}} onClick={handleClose}>Add New Patient</Button>
+        </Box>
+      </Modal>
       <Box
         sx={{
           width: "95%",
@@ -54,6 +128,7 @@ export default function Patients() {
             variant="contained"
             startIcon={<AddIcon />}
             sx={{ marginLeft: "auto" }}
+            onClick={handleOpen}
           >
             New Patient
           </Button>

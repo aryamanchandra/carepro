@@ -42,7 +42,7 @@ export default function Home() {
           marginRight="auto"
         />
       </Box>
-      <Button startIcon={<SpeedIcon />}>Dashboard</Button>
+      <Button startIcon={<SpeedIcon />} onClick={router.push("/")}>Dashboard</Button>
       <Button
         startIcon={<SupervisorAccountIcon />}
         onClick={router.push("/patients")}
