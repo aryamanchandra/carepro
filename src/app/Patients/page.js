@@ -20,18 +20,26 @@ import NotificationsIcon from "@mui/icons-material/Notifications";
 import AddIcon from "@mui/icons-material/Add";
 import SearchIcon from "@mui/icons-material/Search";
 import PatientTable from "../components/Table/PatientTable";
-import CloseIcon from '@mui/icons-material/Close';
+import CloseIcon from "@mui/icons-material/Close";
+import { useRouter } from "next/navigation";
 
 export default function Patients() {
+  const router = useRouter();
+
   const [open, setOpen] = useState(false);
+  const [time, setTime] = useState("");
+
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
-  const [time, setTime] = useState("");
 
   const handleChange = (event) => {
     setTime(event.target.value);
   };
+
+  const handleSubmit = () => {
+    router.push("/patients/add")
+  }
 
   return (
     <Box sx={{ backgroundColor: "#F1F8FF", padding: "20px" }}>
@@ -62,19 +70,33 @@ export default function Patients() {
             p: 5,
           }}
         >
-          <Stack direction="row" alignItems="center" sx={{marginBottom:"20px"}}>
+          <Stack
+            direction="row"
+            alignItems="center"
+            sx={{ marginBottom: "20px" }}
+          >
             <Typography variant="h5">Modal Title</Typography>
-            <Button sx={{marginLeft:"auto"}} onClick={handleClose} ><CloseIcon /></Button>
+            <Button sx={{ marginLeft: "auto" }} onClick={handleClose}>
+              <CloseIcon />
+            </Button>
           </Stack>
           <Divider />
           <Typography sx={{ paddingBottom: "10px", paddingTop: "20px" }}>
             Patient&apos;s Name
           </Typography>
-          <TextField variant="filled" fullWidth placeholder="Krishnan Murthy"></TextField>
+          <TextField
+            variant="filled"
+            fullWidth
+            placeholder="Krishnan Murthy"
+          ></TextField>
           <Typography sx={{ paddingBottom: "10px", paddingTop: "20px" }}>
             Contact Number
           </Typography>
-          <TextField variant="filled" fullWidth placeholder="+91-7004911197"></TextField>
+          <TextField
+            variant="filled"
+            fullWidth
+            placeholder="+91-7004911197"
+          ></TextField>
           <Typography sx={{ paddingBottom: "10px", paddingTop: "20px" }}>
             Patient Type
           </Typography>
@@ -102,7 +124,14 @@ export default function Patients() {
               <MenuItem value={30}>Thirty</MenuItem>
             </Select>
           </FormControl>
-          <Button variant="contained" fullWidth sx={{marginY:"20px", marginTop:"40px", paddingY:"10px"}} onClick={handleClose}>Add New Patient</Button>
+          <Button
+            variant="contained"
+            fullWidth
+            sx={{ marginY: "20px", marginTop: "40px", paddingY: "10px" }}
+            onClick={handleSubmit}
+          >
+            Add New Patient
+          </Button>
         </Box>
       </Modal>
       <Box
