@@ -9,8 +9,11 @@ import ReceiptLongIcon from "@mui/icons-material/ReceiptLong";
 import SupervisorAccountIcon from "@mui/icons-material/SupervisorAccount";
 import SpeedIcon from "@mui/icons-material/Speed";
 import DoctorIcon from "./DoctorIcon";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+  const router = useRouter();
+
   return (
     <Stack
       direction="column"
@@ -40,7 +43,12 @@ export default function Home() {
         />
       </Box>
       <Button startIcon={<SpeedIcon />}>Dashboard</Button>
-      <Button startIcon={<SupervisorAccountIcon />}>Patients</Button>
+      <Button
+        startIcon={<SupervisorAccountIcon />}
+        onClick={router.push("/patients")}
+      >
+        Patients
+      </Button>
       <Button startIcon={<DoctorIcon />}>Doctors</Button>
       <Button startIcon={<ReceiptLongIcon />}>Invoicing</Button>
       <Button startIcon={<ArchiveIcon />}>Inventory</Button>
