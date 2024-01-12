@@ -1,7 +1,11 @@
 import {
   Box,
   FormControl,
+  FormControlLabel,
+  FormLabel,
   MenuItem,
+  Radio,
+  RadioGroup,
   Select,
   Stack,
   TextField,
@@ -111,6 +115,50 @@ export default function RegistrationForm() {
         </Typography>
         <TextField variant="filled" fullWidth placeholder="Indian"></TextField>
       </Stack>
+      <FormControl>
+        <Typography sx={{ paddingBottom: "10px", paddingTop: "20px" }}>
+          Occupation
+        </Typography>
+        <RadioGroup
+          row
+          aria-labelledby="demo-row-radio-buttons-group-label"
+          name="row-radio-buttons-group"
+        >
+          <FormControlLabel
+            value="female"
+            control={<Radio />}
+            label="Defence Service"
+          />
+          <FormControlLabel
+            value="male"
+            control={<Radio />}
+            label="Business/Industrialist"
+          />
+          <FormControlLabel
+            value="other"
+            control={<Radio />}
+            label="Agriculture Doctor"
+          />
+          <FormControlLabel
+            value="female"
+            control={<Radio />}
+            label="Professionals"
+          />
+          <FormControlLabel value="male" control={<Radio />} label="Diplomat" />
+          <FormControlLabel
+            value="other"
+            control={<Radio />}
+            label="Govt/PSU Employee"
+          />
+          <FormControlLabel
+            value="female"
+            control={<Radio />}
+            label="Private Services"
+          />
+          <FormControlLabel value="male" control={<Radio />} label="Staff" />
+          <FormControlLabel value="other" control={<Radio />} label="Others" />
+        </RadioGroup>
+      </FormControl>
       <Typography variant="h6" sx={{ marginTop: "20px" }}>
         Emergency Contact
       </Typography>
@@ -143,6 +191,52 @@ export default function RegistrationForm() {
           Address
         </Typography>
         <TextField variant="filled" fullWidth placeholder="Indian"></TextField>
+      </Stack>
+      <Typography variant="h6" sx={{ marginTop: "20px" }}>
+        Consultation Doctor Detail
+      </Typography>
+      <Stack direction="row">
+        <Stack direction="column">
+          <Typography sx={{ paddingBottom: "10px", paddingTop: "20px" }}>
+            Doctor&apos;s Name
+          </Typography>
+          <TextField
+            label=""
+            variant="filled"
+            placeholder="Krishnan Murthy"
+          ></TextField>
+        </Stack>
+        <Stack direction="column">
+          <Typography sx={{ paddingBottom: "10px", paddingTop: "20px" }}>
+            Speciality
+          </Typography>
+          <TextField variant="filled" placeholder="+91-7004911197"></TextField>
+        </Stack>
+      </Stack>
+      <Typography variant="h6" sx={{ marginTop: "20px" }}>
+        Reference Detail (Optional)
+      </Typography>
+      <Stack direction="row">
+        <Stack direction="column">
+          <Typography sx={{ paddingBottom: "10px", paddingTop: "20px" }}>
+            Referrer Doctor
+          </Typography>
+          <TextField
+            label=""
+            variant="filled"
+            placeholder="Krishnan Murthy"
+          ></TextField>
+        </Stack>
+        <Stack direction="column">
+          <Typography sx={{ paddingBottom: "10px", paddingTop: "20px" }}>
+            Referrer Address
+          </Typography>
+          <TextField
+            variant="filled"
+            placeholder="+91-7004911197"
+            fullWidth
+          ></TextField>
+        </Stack>
       </Stack>
     </Box>
   );
