@@ -1,4 +1,4 @@
-import { Box, Button, Stack, Typography } from "@mui/material";
+import { Box, Button, Divider, Stack, Typography } from "@mui/material";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import Link from "next/link";
 
@@ -17,7 +17,17 @@ export default function Add() {
           </Typography>
         </Stack>
       </Stack>
-      <Link href="/patients"><Typography>Go Back to Patients</Typography></Link>
+      <Link href="/patients">
+        <Typography>Go Back to Patients</Typography>
+      </Link>
+      <Box sx={{backgroundColor:"#fff", borderRadius:"20px", padding:"20px"}}>
+        <Stack direction="row" alignItems="center" sx={{marginBottom: "20px"}}>
+          <Typography> PATIENT NO. 10214234534</Typography>
+          <Button variant="contained" sx={{marginLeft:"auto"}}>Save</Button>
+        </Stack>
+        <Divider />
+        
+      </Box>
     </Box>
   );
 }
