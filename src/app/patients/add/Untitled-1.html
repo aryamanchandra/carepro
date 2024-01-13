@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <form method="post" action="">
+        <label for="name">Name</label> <input type="text" id="name" name="name" required autofocus> <br>
+        <label for="pw">Password</label><input type="password" name="pw" id="pw" required> <br>
+        
+        <fieldset>
+            <legend><h2>Options</h2></legend>
+            <h2>Radio Button</h2>
+            <input type="radio" name="gender" value="m"> Male
+            <input type="radio" name="gender" value="f"> Female
+            <input type="radio" name="gender" value="o"> Other <br>
+            <h2>Checkbox</h2>
+            <input type="checkbox" value="hi" name="lang"> Hindi
+            <input type="checkbox" value="en" name="lang"> English
+            <input type="checkbox" value="tm" name="lang"> Tamil <br>
+        </fieldset>
+        <h2>Dropdown</h2>
+        <select name="Country">
+            <optgroup label="Asia">
+                <option value="ind">India</option>
+                <option value="chi">China</option>
+                <option value="nep">Nepal</option>
+            </optgroup>
+            <optgroup label="Europe">
+                <option value="eng">England</option>
+                <option value="ger">Germany</option>
+                <option value="Ita">Italy</option>
+            </optgroup>
+        </select> <br>
+        <textarea name="feedback" placeholder="feedback" cols="30" rows="10"></textarea><br>
+        <input type="color"> <br>
+        <input type="date"> <br>
+        <input type="datetime-local"><br>
+        <input type="email"><br>
+        <input type="month"><br>
+        <input type="week"><br>
+        <input type="number" min="0" max="100" step="5"><br>
+        <input type="time"><br>
+        <input type="time"> <br>
+        <input type="url"> <br>
+        <input type="file"> <br>
+        <input type="file" multiple><br>
+        <input type="file" accept=".pdf"><br>
+        <input type="submit" value="Engage">
+        <input type="reset">
+    </form>
+
+    <p>
+        <b>This is bold</b>
+        this is not
+        <strong>This is Strong</strong>
+        <i>This is italics</i>
+        The appointment is at <em>9 pm sharp</em> from n<sub>1</sub> to n<sub>10</sub>
+        sum up x<sup>2</sup>
+        <blockquote>This is a blockquote</blockquote>
+        <p><abbr title="World Health Organisation">WHO</abbr> informs that covid is still coming</p>
+        <cite>What you sow, sow shall you reap</cite>
+
+    </p>
+</body>
+</html>
