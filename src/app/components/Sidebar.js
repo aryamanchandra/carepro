@@ -16,6 +16,8 @@ export default function Home() {
 
   const handlePatient = () => (router.push("/patients"))
   const handleDashboard = () => (router.push("/"))
+  const handleDoctor = () => (router.push("/doctors"))
+  const handleInvoice = () => (router.push("/invoicing"))
   
   return (
     <Stack
@@ -52,8 +54,8 @@ export default function Home() {
       >
         Patients
       </Button>
-      <Button startIcon={<DoctorIcon />}>Doctors</Button>
-      <Button startIcon={<ReceiptLongIcon />}>Invoicing</Button>
+      <Button startIcon={<DoctorIcon />} onClick={handleDoctor}>Doctors</Button>
+      <Button startIcon={<ReceiptLongIcon />} onClick={handleInvoice}>Invoicing</Button>
       <Button startIcon={<ArchiveIcon />}>Inventory</Button>
       <Button startIcon={<SettingsIcon />}>Settings</Button>
       <Button startIcon={<LogoutIcon />} sx={{ marginTop: "auto" }}>
