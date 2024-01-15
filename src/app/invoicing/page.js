@@ -152,14 +152,14 @@ export default function Patients() {
           }}
           alignItems="center"
         >
-          <Typography>Patient Info</Typography>
+          <Typography>Patient&apos;s Invoices</Typography>
           <Button
             variant="contained"
             startIcon={<AddIcon />}
             sx={{ marginLeft: "auto" }}
             onClick={handleOpen}
           >
-            New Patient
+            New Invoice
           </Button>
         </Stack>
         <Box sx={{ borderBottom: 1, borderColor: "divider" }}>

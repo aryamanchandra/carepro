@@ -45,7 +45,7 @@ export default function Patients() {
     <Box sx={{ backgroundColor: "#F1F8FF", padding: "20px" }}>
       <Stack direction="row" marginBottom="30px">
         <Typography variant="h6" color="primary.light">
-          Patient Details
+          Doctors
         </Typography>
         <Button startIcon={<NotificationsIcon />} sx={{ marginLeft: "auto" }} />
         <Stack direction="column">
@@ -130,7 +130,7 @@ export default function Patients() {
             sx={{ marginY: "20px", marginTop: "40px", paddingY: "10px" }}
             onClick={handleSubmit}
           >
-            Add New Patient
+            Add New Doctor
           </Button>
         </Box>
       </Modal>
@@ -152,14 +152,14 @@ export default function Patients() {
           }}
           alignItems="center"
         >
-          <Typography>Patient Info</Typography>
+          <Typography>Doctor Info</Typography>
           <Button
             variant="contained"
             startIcon={<AddIcon />}
             sx={{ marginLeft: "auto" }}
             onClick={handleOpen}
           >
-            New Patient
+            New Doctor
           </Button>
         </Stack>
         <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
