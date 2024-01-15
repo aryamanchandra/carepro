@@ -45,7 +45,7 @@ export default function Patients() {
     <Box sx={{ backgroundColor: "#F1F8FF", padding: "20px" }}>
       <Stack direction="row" marginBottom="30px">
         <Typography variant="h6" color="primary.light">
-          Patient Details
+          Invoicing
         </Typography>
         <Button startIcon={<NotificationsIcon />} sx={{ marginLeft: "auto" }} />
         <Stack direction="column">
