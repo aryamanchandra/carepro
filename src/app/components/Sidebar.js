@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, Button, Stack } from "@mui/material";
+import { Box, Button, Stack,styled } from "@mui/material";
 import Image from "next/image";
 import LogoutIcon from "@mui/icons-material/Logout";
 import SettingsIcon from "@mui/icons-material/Settings";
@@ -10,6 +10,13 @@ import SupervisorAccountIcon from "@mui/icons-material/SupervisorAccount";
 import SpeedIcon from "@mui/icons-material/Speed";
 import DoctorIcon from "./DoctorIcon";
 import { useRouter } from "next/navigation";
+
+const SidebarButton = styled(Button)({
+  textTransform:"capitalize",
+  "&:hover": {
+    backgroundColor: "#efefef !important",
+  },
+});
 
 export default function Home() {
   const router = useRouter();
@@ -47,20 +54,20 @@ export default function Home() {
           marginRight="auto"
         />
       </Box>
-      <Button startIcon={<SpeedIcon />} onClick={handleDashboard}>Dashboard</Button>
-      <Button
+      <SidebarButton startIcon={<SpeedIcon />} onClick={handleDashboard}>Dashboard</SidebarButton>
+      <SidebarButton
         startIcon={<SupervisorAccountIcon />}
         onClick={handlePatient}
       >
         Patients
-      </Button>
-      <Button startIcon={<DoctorIcon />} onClick={handleDoctor}>Doctors</Button>
-      <Button startIcon={<ReceiptLongIcon />} onClick={handleInvoice}>Invoicing</Button>
-      <Button startIcon={<ArchiveIcon />}>Inventory</Button>
-      <Button startIcon={<SettingsIcon />}>Settings</Button>
-      <Button startIcon={<LogoutIcon />} sx={{ marginTop: "auto" }}>
+      </SidebarButton>
+      <SidebarButton startIcon={<DoctorIcon />} onClick={handleDoctor}>Doctors</SidebarButton>
+      <SidebarButton startIcon={<ReceiptLongIcon />} onClick={handleInvoice}>Invoicing</SidebarButton>
+      <SidebarButton startIcon={<ArchiveIcon />}>Inventory</SidebarButton>
+      <SidebarButton startIcon={<SettingsIcon />}>Settings</SidebarButton>
+      <SidebarButton startIcon={<LogoutIcon />} sx={{ marginTop: "auto" }}>
         Logout
-      </Button>
+      </SidebarButton>
     </Stack>
   );
 }
