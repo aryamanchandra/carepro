@@ -164,13 +164,6 @@ export default function Patients() {
         </Stack>
         <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
           <Stack direction="row" sx={{ marginY: "20px" }}>
-            {/* <TextField
-              id="filled-basic"
-              label="Search"
-              variant="filled"
-              startIcon={<SearchIcon />}
-              sx={{ borderRadius: "20px", marginRight: "20px" }}
-            /> */}
             <TextField
               id="input-with-icon-textfield"
               placeholder="Search"
@@ -183,11 +176,6 @@ export default function Patients() {
               }}
               variant="filled"
               sx={{ borderRadius: "20px !important", marginRight: "20px" }}
-            />
-            <TextField
-              id="outlined-basic"
-              label="Outlined"
-              variant="outlined"
             />
           </Stack>
           <PatientTable />
