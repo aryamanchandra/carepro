@@ -40,10 +40,12 @@ export default function BasicTable() {
       >
         <TableHead>
           <TableRow>
-            <TableCell>Time</TableCell>
             <TableCell>Patient Name</TableCell>
-            <TableCell>Date</TableCell>
-            <TableCell>Doctor</TableCell>
+            <TableCell>Patient ID</TableCell>
+            <TableCell>Invoice No.</TableCell>
+            <TableCell>Pending Amt</TableCell>
+            <TableCell>Status</TableCell>
+            <TableCell>User Action</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>

@@ -19,7 +19,7 @@ import IPDTable from "../components/Table/IPDTable";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import AddIcon from "@mui/icons-material/Add";
 import SearchIcon from "@mui/icons-material/Search";
-import PatientTable from "../components/Table/PatientTable";
+import DoctorTable from "../components/Table/DoctorTable";
 import CloseIcon from "@mui/icons-material/Close";
 import { useRouter } from "next/navigation";
 
@@ -190,7 +190,7 @@ export default function Patients() {
               variant="outlined"
             />
           </Stack>
-          <PatientTable />
+          <DoctorTable />
         </Box>
       </Box>
     </Box>
