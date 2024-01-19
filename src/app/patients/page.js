@@ -8,6 +8,7 @@ import {
   InputAdornment,
   MenuItem,
   Modal,
+  NativeSelect,
   Select,
   Stack,
   Tab,
@@ -81,7 +82,7 @@ export default function Patients() {
               alignItems="center"
               sx={{ marginBottom: "20px" }}
             >
-              <Typography variant="h5">Modal Title</Typography>
+              <Typography variant="h5">Add New Patient</Typography>
               <Button sx={{ marginLeft: "auto" }} onClick={handleClose}>
                 <CloseIcon />
               </Button>
@@ -91,29 +92,32 @@ export default function Patients() {
               Patient&apos;s Name
             </Typography>
             <TextField
-              variant="filled"
+              variant="outlined"
               fullWidth
               placeholder="Krishnan Murthy"
+              sx={{ backgroundColor: "#F4F6F6" }}
             ></TextField>
             <Typography sx={{ paddingBottom: "10px", paddingTop: "20px" }}>
               Contact Number
             </Typography>
             <TextField
-              variant="filled"
+              variant="outlined"
               fullWidth
               placeholder="+91-7004911197"
+              sx={{ backgroundColor: "#F4F6F6" }}
             ></TextField>
             <Typography sx={{ paddingBottom: "10px", paddingTop: "20px" }}>
               Patient Type
             </Typography>
             <FormControl
-              variant="filled"
+              variant="outlined"
               fullWidth
               placeholder="Choose Option"
               sx={{
                 marginTop: "0px",
                 marginLeft: "auto",
                 paddingTop: "0px",
+                backgroundColor:"#F4F6F6"
               }}
             >
               <Select
@@ -124,6 +128,7 @@ export default function Patients() {
                 onChange={handleChange}
                 placeholder="Choose Option"
                 fullWidth
+                defaultValue={10}
               >
                 <MenuItem value={10}>Ten</MenuItem>
                 <MenuItem value={20}>Twenty</MenuItem>
@@ -133,7 +138,16 @@ export default function Patients() {
             <Button
               variant="contained"
               fullWidth
-              sx={{ marginY: "20px", marginTop: "40px", paddingY: "10px" }}
+              sx={{
+                marginY: "20px",
+                marginTop: "40px",
+                paddingY: "10px",
+                marginLeft: "auto",
+                backgroundColor: "#3497F9",
+                boxShadow: "none",
+                py: 2,
+                borderRadius: "5px",
+              }}
               onClick={handleSubmit}
             >
               Add New Patient
@@ -183,9 +197,7 @@ export default function Patients() {
                 variant="outlined"
                 InputProps={{
                   startAdornment: (
-                    <InputAdornment
-                      position="start"
-                    >
+                    <InputAdornment position="start">
                       <SearchIcon />
                     </InputAdornment>
                   ),
@@ -194,7 +206,7 @@ export default function Patients() {
                   style: {
                     paddingX: "15",
                     border: "none",
-                    paddingY:"10"
+                    paddingY: "10",
                   },
                 }}
                 sx={{
