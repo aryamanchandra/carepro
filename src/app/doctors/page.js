@@ -32,14 +32,13 @@ export default function Patients() {
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
-
   const handleChange = (event) => {
     setTime(event.target.value);
   };
 
   const handleSubmit = () => {
-    router.push("/patients/add")
-  }
+    router.push("/patients/add");
+  };
 
   return (
     <Box sx={{ backgroundColor: "#F1F8FF", padding: "20px" }}>
@@ -152,11 +151,17 @@ export default function Patients() {
           }}
           alignItems="center"
         >
-          <Typography>Doctor Info</Typography>
+          <Typography variant="h6">Doctor Info</Typography>
           <Button
             variant="contained"
             startIcon={<AddIcon />}
-            sx={{ marginLeft: "auto" }}
+            sx={{
+              marginLeft: "auto",
+              backgroundColor: "#3497F9",
+              boxShadow: "none",
+              py: 1,
+              borderRadius: "5px",
+            }}
             onClick={handleOpen}
           >
             New Doctor
@@ -166,7 +171,9 @@ export default function Patients() {
           <Stack direction="row" sx={{ marginY: "20px" }}>
             <TextField
               id="input-with-icon-textfield"
+              type="search"
               placeholder="Search"
+              variant="outlined"
               InputProps={{
                 startAdornment: (
                   <InputAdornment position="start">
@@ -174,8 +181,16 @@ export default function Patients() {
                   </InputAdornment>
                 ),
               }}
-              variant="filled"
-              sx={{ borderRadius: "20px !important", marginRight: "20px" }}
+              inputProps={{
+                style: {
+                  paddingX: "15",
+                  border: "none",
+                  paddingY: "10",
+                },
+              }}
+              sx={{
+                marginRight: "20px",
+              }}
             />
           </Stack>
           <DoctorTable />
