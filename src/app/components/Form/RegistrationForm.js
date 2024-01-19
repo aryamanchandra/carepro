@@ -12,6 +12,7 @@ import {
   Typography,
 } from "@mui/material";
 import { useState } from "react";
+import "./RegistrationForm.css";
 
 export default function RegistrationForm() {
   const [time, setTime] = useState("");
@@ -21,37 +22,46 @@ export default function RegistrationForm() {
   };
   return (
     <Box>
-      <Stack direction="row">
+      <Stack direction="row" gap={4}>
         <Stack direction="column">
-          <Typography sx={{ paddingBottom: "10px", paddingTop: "20px" }}>
+          <Typography sx={{ paddingBottom: "10px", paddingTop: "20px" }} className="input-label">
             Patient&apos;s Name
           </Typography>
           <TextField
             label=""
-            variant="filled"
+            variant="outlined"
             placeholder="Krishnan Murthy"
+            className="input"
           ></TextField>
         </Stack>
         <Stack direction="column">
-          <Typography sx={{ paddingBottom: "10px", paddingTop: "20px" }}>
+          <Typography sx={{ paddingBottom: "10px", paddingTop: "20px" }} className="input-label">
             Father&apos;s/Husband/Guardian&apos;s Name
           </Typography>
-          <TextField variant="filled" placeholder="+91-7004911197"></TextField>
+          <TextField
+            variant="outlined"
+            placeholder="+91-7004911197"
+            className="input"
+          ></TextField>
         </Stack>
         <Stack direction="column">
-          <Typography sx={{ paddingBottom: "10px", paddingTop: "20px" }}>
+          <Typography sx={{ paddingBottom: "10px", paddingTop: "20px" }} className="input-label">
             Admission Date
           </Typography>
-          <TextField variant="filled" placeholder="+91-7004911197"></TextField>
+          <TextField
+            variant="outlined"
+            placeholder="+91-7004911197"
+            className="input"
+          ></TextField>
         </Stack>
       </Stack>
-      <Stack direction="row">
+      <Stack direction="row" gap={4}>
         <Stack direction="column">
-          <Typography sx={{ paddingBottom: "10px", paddingTop: "20px" }}>
+          <Typography sx={{ paddingBottom: "10px", paddingTop: "20px" }}className="input-label">
             Sex
           </Typography>
           <FormControl
-            variant="filled"
+            variant="outlined"
             placeholder="Choose Option"
             sx={{
               marginTop: "0px",
@@ -67,6 +77,7 @@ export default function RegistrationForm() {
               value={time}
               onChange={handleChange}
               placeholder="Choose Option"
+              className="input"
             >
               <MenuItem value={10}>Ten</MenuItem>
               <MenuItem value={20}>Twenty</MenuItem>
@@ -75,11 +86,11 @@ export default function RegistrationForm() {
           </FormControl>
         </Stack>
         <Stack direction="column">
-          <Typography sx={{ paddingBottom: "10px", paddingTop: "20px" }}>
+          <Typography sx={{ paddingBottom: "10px", paddingTop: "20px" }} className="input-label">
             Marital Status
           </Typography>
           <FormControl
-            variant="filled"
+            variant="outlined"
             placeholder="Choose Option"
             sx={{
               marginTop: "0px",
@@ -95,6 +106,7 @@ export default function RegistrationForm() {
               value={time}
               onChange={handleChange}
               placeholder="Choose Option"
+              className="input"
             >
               <MenuItem value={10}>Ten</MenuItem>
               <MenuItem value={20}>Twenty</MenuItem>
@@ -103,20 +115,29 @@ export default function RegistrationForm() {
           </FormControl>
         </Stack>
         <Stack direction="column">
-          <Typography sx={{ paddingBottom: "10px", paddingTop: "20px" }}>
+          <Typography sx={{ paddingBottom: "10px", paddingTop: "20px" }} className="input-label">
             Nationality
           </Typography>
-          <TextField variant="filled" placeholder="Indian"></TextField>
+          <TextField
+            variant="outlined"
+            placeholder="Indian"
+            className="input"
+          ></TextField>
         </Stack>
       </Stack>
       <Stack direction="column">
-        <Typography sx={{ paddingBottom: "10px", paddingTop: "20px" }}>
+        <Typography sx={{ paddingBottom: "10px", paddingTop: "20px" }} className="input-label">
           Address
         </Typography>
-        <TextField variant="filled" fullWidth placeholder="Indian"></TextField>
+        <TextField
+          variant="outlined"
+          fullWidth
+          placeholder="Indian"
+          className="input"
+        ></TextField>
       </Stack>
       <FormControl>
-        <Typography sx={{ paddingBottom: "10px", paddingTop: "20px" }}>
+        <Typography sx={{ paddingBottom: "10px", paddingTop: "20px" }} className="input-label">
           Occupation
         </Typography>
         <RadioGroup
@@ -159,82 +180,103 @@ export default function RegistrationForm() {
           <FormControlLabel value="other" control={<Radio />} label="Others" />
         </RadioGroup>
       </FormControl>
-      <Typography variant="h6" sx={{ marginTop: "20px" }}>
+      <Typography variant="h6" sx={{ marginTop: "40px" }}>
         Emergency Contact
       </Typography>
-      <Stack direction="row">
+      <Stack direction="row" gap={4}>
         <Stack direction="column">
-          <Typography sx={{ paddingBottom: "10px", paddingTop: "20px" }}>
+          <Typography sx={{ paddingBottom: "10px", paddingTop: "20px" }} className="input-label">
             Name of the person to be notified{" "}
           </Typography>
           <TextField
             label=""
-            variant="filled"
+            variant="outlined"
             placeholder="Krishnan Murthy"
+            className="input"
           ></TextField>
         </Stack>
         <Stack direction="column">
-          <Typography sx={{ paddingBottom: "10px", paddingTop: "20px" }}>
+          <Typography sx={{ paddingBottom: "10px", paddingTop: "20px" }} className="input-label">
             Relationship with the patient{" "}
           </Typography>
-          <TextField variant="filled" placeholder="+91-7004911197"></TextField>
+          <TextField
+            variant="outlined"
+            placeholder="+91-7004911197"
+            className="input"
+          ></TextField>
         </Stack>
         <Stack direction="column">
-          <Typography sx={{ paddingBottom: "10px", paddingTop: "20px" }}>
+          <Typography sx={{ paddingBottom: "10px", paddingTop: "20px" }} className="input-label">
             Contact No.{" "}
           </Typography>
-          <TextField variant="filled" placeholder="+91-7004911197"></TextField>
+          <TextField
+            variant="outlined"
+            placeholder="+91-7004911197"
+            className="input"
+          ></TextField>
         </Stack>
       </Stack>
       <Stack direction="column">
-        <Typography sx={{ paddingBottom: "10px", paddingTop: "20px" }}>
+        <Typography sx={{ paddingBottom: "10px", paddingTop: "20px" }} className="input-label">
           Address
         </Typography>
-        <TextField variant="filled" fullWidth placeholder="Indian"></TextField>
+        <TextField
+          variant="outlined"
+          fullWidth
+          placeholder="Indian"
+          className="input"
+        ></TextField>
       </Stack>
-      <Typography variant="h6" sx={{ marginTop: "20px" }}>
+      <Typography variant="h6" sx={{ marginTop: "40px" }}>
         Consultation Doctor Detail
       </Typography>
-      <Stack direction="row">
+      <Stack direction="row" gap={4}>
         <Stack direction="column">
-          <Typography sx={{ paddingBottom: "10px", paddingTop: "20px" }}>
+          <Typography sx={{ paddingBottom: "10px", paddingTop: "20px" }} className="input-label">
             Doctor&apos;s Name
           </Typography>
           <TextField
             label=""
-            variant="filled"
+            variant="outlined"
             placeholder="Krishnan Murthy"
+            className="input"
           ></TextField>
         </Stack>
         <Stack direction="column">
-          <Typography sx={{ paddingBottom: "10px", paddingTop: "20px" }}>
+          <Typography sx={{ paddingBottom: "10px", paddingTop: "20px" }} className="input-label">
             Speciality
           </Typography>
-          <TextField variant="filled" placeholder="+91-7004911197"></TextField>
+          <TextField
+            variant="outlined"
+            placeholder="+91-7004911197"
+            className="input"
+          ></TextField>
         </Stack>
       </Stack>
-      <Typography variant="h6" sx={{ marginTop: "20px" }}>
+      <Typography variant="h6" sx={{ marginTop: "20px" }} className="input-label">
         Reference Detail (Optional)
       </Typography>
-      <Stack direction="row">
+      <Stack direction="row" gap={4}>
         <Stack direction="column">
-          <Typography sx={{ paddingBottom: "10px", paddingTop: "20px" }}>
+          <Typography sx={{ paddingBottom: "10px", paddingTop: "20px" }} className="input-label">
             Referrer Doctor
           </Typography>
           <TextField
             label=""
-            variant="filled"
+            variant="outlined"
             placeholder="Krishnan Murthy"
+            className="input"
           ></TextField>
         </Stack>
         <Stack direction="column">
-          <Typography sx={{ paddingBottom: "10px", paddingTop: "20px" }}>
+          <Typography sx={{ paddingBottom: "10px", paddingTop: "20px" }} className="input-label">
             Referrer Address
           </Typography>
           <TextField
-            variant="filled"
+            variant="outlined"
             placeholder="+91-7004911197"
             fullWidth
+            className="input"
           ></TextField>
         </Stack>
       </Stack>

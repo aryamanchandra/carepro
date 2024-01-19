@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import {
   Box,
   Button,
@@ -13,6 +13,7 @@ import Link from "next/link";
 import { useState } from "react";
 import PropTypes from "prop-types";
 import RegistrationForm from "@/app/components/Form/RegistrationForm";
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -68,27 +69,46 @@ export default function Add() {
         </Stack>
       </Stack>
       <Link href="/patients">
-        <Typography sx={{marginBottom:"20px"}}>Go Back to Patients</Typography>
+        <Button
+          sx={{ marginBottom: "20px", color: "#3497F9" }}
+          startIcon={<ArrowBackIosIcon />}
+        >
+          Go Back to Patients
+        </Button>
       </Link>
       <Box
-        sx={{ backgroundColor: "#fff", borderRadius: "20px", padding: "20px" }}
+        sx={{ backgroundColor: "#fff", borderRadius: "20px", padding: "30px", paddingX:"40px" }}
       >
         <Stack
           direction="row"
           alignItems="center"
           sx={{ marginBottom: "20px" }}
         >
-          <Typography> PATIENT NO. 10214234534</Typography>
-          <Button variant="contained" sx={{ marginLeft: "auto" }}>
+          <Typography variant="subtitle1"> PATIENT NO. 10214234534</Typography>
+          <Button
+            variant="contained"
+            sx={{
+              paddingY: "10px",
+              marginLeft: "auto",
+              backgroundColor: "#3497F9",
+              boxShadow: "none",
+              py: 1,
+              px:3,
+              borderRadius: "5px",
+            }}
+          >
             Save
           </Button>
         </Stack>
         <Divider />
-        <Box sx={{ borderBottom: 1, borderColor: "divider", marginTop:"10px" }}>
+        <Box
+          sx={{ borderBottom: 1, borderColor: "divider", marginTop: "10px" }}
+        >
           <Tabs
             value={value}
             onChange={handleChange}
             aria-label="basic tabs example"
+            textColor="#3497F9"
           >
             <Tab label="Registration Form" {...a11yProps(0)} />
             <Tab label="Risk Coverage Declaration" {...a11yProps(1)} />

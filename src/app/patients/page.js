@@ -129,6 +129,7 @@ export default function Patients() {
                 placeholder="Choose Option"
                 fullWidth
                 defaultValue={10}
+                sx={{color:"#1c1c1c"}}
               >
                 <MenuItem value={10}>Ten</MenuItem>
                 <MenuItem value={20}>Twenty</MenuItem>
