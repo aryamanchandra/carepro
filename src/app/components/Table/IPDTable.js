@@ -12,17 +12,17 @@ function createData(name, calories, fat, carbs, protein) {
 }
 
 const rows = [
-  createData("9:30 AM", "Elizabeth Polson", "05/12/2022", "Doctor John"),
-  createData("9:30 AM", "John David", "05/12/2022", "Doctor Joel"),
-  createData("10:00 AM", "Krishtav Rajan", "05/12/2022", "Doctor Joel"),
-  createData("11:30 AM", "Sumanth Tinson", "05/12/2022", "Doctor John"),
-  createData("930 AM", "EG Subtornani", "05/12/2022", "Doctor John"),
-  createData("11:00 AM", "John David", "05/12/2022", "Doctor Joel"),
-  createData("11:30 AM", "Krishtov Rojan", "05/12/2022", "Doctor Joel"),
-  createData("11:00 AM", "Sumanth Tinson", "05/12/2022", "Doctor John"),
-  createData("11:00 AM", "EG Subramani", "05/12/2022", "Doctor John"),
-  createData("11:00 AM", "Sumanth rinson", "05/12/2022", "Doctor John"),
-  createData("11:00 AM", "EG Subrornoni", "05/12/2022", "Doctor Joel"),
+  createData("9:30 AM", "05/12/2022", "Elizabeth Polson", "Doctor John"),
+  createData("9:30 AM", "05/12/2022", "John David", "Doctor Joel"),
+  createData("10:00 AM", "05/12/2022", "Krishtav Rajan", "Doctor Joel"),
+  createData("11:30 AM", "05/12/2022", "Sumanth Tinson", "Doctor John"),
+  createData("930 AM", "05/12/2022", "EG Subtornani", "Doctor John"),
+  createData("11:00 AM", "05/12/2022", "John David", "Doctor Joel"),
+  createData("11:30 AM", "05/12/2022", "Krishtov Rojan", "Doctor Joel"),
+  createData("11:00 AM", "05/12/2022", "Sumanth Tinson", "Doctor John"),
+  createData("11:00 AM", "05/12/2022", "EG Subramani", "Doctor John"),
+  createData("11:00 AM", "05/12/2022", "Sumanth rinson", "Doctor John"),
+  createData("11:00 AM", "05/12/2022", "EG Subrornoni", "Doctor Joel"),  
 ];
 
 export default function BasicTable() {
@@ -38,8 +38,8 @@ export default function BasicTable() {
         <TableHead>
           <TableRow>
             <TableCell>Time</TableCell>
-            <TableCell>Patient Name</TableCell>
             <TableCell>Date</TableCell>
+            <TableCell>Patient Name</TableCell>
             <TableCell>Doctor</TableCell>
           </TableRow>
         </TableHead>

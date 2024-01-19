@@ -46,9 +46,9 @@ export default function BasicTabs() {
   return (
     <Box sx={{ width: '100%' }}>
       <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-        <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
-          <Tab label="IPD APPOINTMENTS" {...a11yProps(0)} />
-          <Tab label="OPD APPOINTMENTS" {...a11yProps(1)} />
+        <Tabs value={value} onChange={handleChange} textColor="#3497F9">
+          <Tab label="IPD APPOINTMENTS" {...a11yProps(0)} sx={{color:"#3497F9 !important"}} />
+          <Tab label="OPD APPOINTMENTS" {...a11yProps(1)} sx={{color:"#3497F9"}}/>
         </Tabs>
       </Box>
       <CustomTabPanel value={value} index={0}>

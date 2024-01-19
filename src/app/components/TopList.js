@@ -40,7 +40,7 @@ export default function TopList() {
     <Box sx={{ paddingX: "20px", paddingY: "10px" }}>
       <Stack direction="row" alignItems="flex-end" sx={{marginBottom:"20px"}}>
         <Typography
-          variant="subtitle1"
+          variant="h6"
           sx={{ margin: "0px", paddingTop: "0px" }}
         >
           Top Medicines Sold
@@ -87,6 +87,7 @@ export default function TopList() {
               },
             ],
           }}
+          style={{width:"80%", maxWidth:"800px", height:"auto", margin:"30px", marginLeft:"auto", marginRight:"auto"}}
         />
       </div>
     </Box>
