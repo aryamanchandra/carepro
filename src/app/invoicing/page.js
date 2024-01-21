@@ -26,11 +26,11 @@ import { useRouter } from "next/navigation";
 export default function Patients() {
   const router = useRouter();
 
-  const [open, setOpen] = useState(false);
   const [time, setTime] = useState("");
 
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+  const handleOpen = () => {
+    router.push("/invoicing/add")
+  };
 
   const handleChange = (event) => {
     setTime(event.target.value);
