@@ -90,6 +90,20 @@ export default function RegistrationForm() {
           ></TextField>
         </Stack>
       </Stack>
+      <Stack direction="column">
+        <Typography
+          sx={{ paddingBottom: "10px", paddingTop: "20px" }}
+          className="input-label"
+        >
+          Address
+        </Typography>
+        <TextField
+          variant="outlined"
+          fullWidth
+          placeholder="Indian"
+          className="input"
+        ></TextField>
+      </Stack>
     </Box>
   );
 }
