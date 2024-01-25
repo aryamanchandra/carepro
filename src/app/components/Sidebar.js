@@ -25,6 +25,7 @@ export default function Home() {
   const handleDashboard = () => (router.push("/"))
   const handleDoctor = () => (router.push("/doctors"))
   const handleInvoice = () => (router.push("/invoicing"))
+  const handleInventory = () => (router.push("/inventory"))
   
   return (
     <Stack
@@ -63,7 +64,7 @@ export default function Home() {
       </SidebarButton>
       <SidebarButton startIcon={<DoctorIcon />} onClick={handleDoctor}>Doctors</SidebarButton>
       <SidebarButton startIcon={<ReceiptLongIcon />} onClick={handleInvoice}>Invoicing</SidebarButton>
-      <SidebarButton startIcon={<ArchiveIcon />}>Inventory</SidebarButton>
+      <SidebarButton startIcon={<ArchiveIcon />} onClick={handleInventory}>Inventory</SidebarButton>
       <SidebarButton startIcon={<SettingsIcon />}>Settings</SidebarButton>
       <SidebarButton startIcon={<LogoutIcon />} sx={{ marginTop: "auto" }}>
         Logout
