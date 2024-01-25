@@ -89,19 +89,19 @@ export default function Add() {
           </Grid>
           <Grid item xs={4} sx={{padding:"20px"}}>
             <Typography sx={{marginTop:"20px"}}>Payment Summary</Typography>
-            <Stack direction="row" sx={{paddingTop:"20px", paddingX:"20px"}}>
+            <Stack direction="row" sx={{paddingY:"20px", paddingX:"20px"}}>
               <Typography variant="h6">Sub total</Typography>
               <Typography variant="h6" sx={{marginLeft:"auto"}}>$7000.00</Typography>
             </Stack>
-            <Stack direction="row" sx={{paddingTop:"20px", paddingX:"20px"}}>
+            <Stack direction="row" sx={{paddingY:"20px", paddingX:"20px"}}>
               <Typography variant="h6">Discount (20%)</Typography>
               <Typography variant="h6" sx={{marginLeft:"auto"}}>$52.80</Typography>
             </Stack>
-            <Stack direction="row" sx={{paddingTop:"20px", paddingX:"20px"}}>
+            <Stack direction="row" sx={{paddingY:"20px", paddingX:"20px"}}>
               <Typography variant="h6">Tax fee</Typography>
               <Typography variant="h6" sx={{marginLeft:"auto"}}>$52.80</Typography>
             </Stack>
-            <Stack direction="row" sx={{paddingTop:"20px", paddingX:"20px"}}>
+            <Stack direction="row" sx={{paddingY:"20px", paddingX:"20px", backgroundColor:"#F8FAFC"}}>
               <Typography variant="h6">Grand Total</Typography>
               <Typography variant="h6" sx={{marginLeft:"auto"}}>$316.8</Typography>
             </Stack>
