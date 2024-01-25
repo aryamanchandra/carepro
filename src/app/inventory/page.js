@@ -19,7 +19,7 @@ import IPDTable from "../components/Table/IPDTable";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import AddIcon from "@mui/icons-material/Add";
 import SearchIcon from "@mui/icons-material/Search";
-import InvoiceTable from "../components/Table/InvoiceTable";
+import InventoryTable from "../components/Table/InventoryTable";
 import CloseIcon from "@mui/icons-material/Close";
 import { useRouter } from "next/navigation";
 
@@ -72,7 +72,7 @@ export default function Patients() {
           }}
           alignItems="center"
         >
-          <Typography variant="h6">Patient&apos;s Invoices</Typography>
+          <Typography variant="h6">Inventory Items</Typography>
           <Button
             variant="contained"
             startIcon={<AddIcon />}
@@ -85,7 +85,7 @@ export default function Patients() {
             }}
             onClick={handleOpen}
           >
-            New Invoice
+            New Item
           </Button>
         </Stack>
         <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
@@ -114,7 +114,7 @@ export default function Patients() {
               }}
             />
           </Stack>
-          <InvoiceTable />
+          <InventoryTable />
         </Box>
       </Box>
     </Box>
