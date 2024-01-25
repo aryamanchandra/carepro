@@ -52,7 +52,7 @@ export default function RegistrationForm() {
           <TextField
             label=""
             variant="outlined"
-            placeholder="Krishnan Murthy"
+            placeholder="Choose Date"
             className="input"
           ></TextField>
         </Stack>
@@ -65,7 +65,7 @@ export default function RegistrationForm() {
           </Typography>
           <TextField
             variant="outlined"
-            placeholder="+91-7004911197"
+            placeholder="Choose Date"
             className="input"
           ></TextField>
         </Stack>
@@ -80,7 +80,7 @@ export default function RegistrationForm() {
           </Typography>
           <TextField
             variant="outlined"
-            placeholder="+91-7004911197"
+            placeholder="Patient ID"
             className="input"
           ></TextField>
         </Stack>
@@ -93,7 +93,7 @@ export default function RegistrationForm() {
           </Typography>
           <TextField
             variant="outlined"
-            placeholder="Indian"
+            placeholder="Krishna Murthy"
             className="input"
           ></TextField>
         </Stack>
