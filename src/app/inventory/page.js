@@ -26,11 +26,11 @@ import { useRouter } from "next/navigation";
 export default function Patients() {
   const router = useRouter();
 
+  const [open, setOpen] = useState(false);
   const [time, setTime] = useState("");
 
-  const handleOpen = () => {
-    router.push("/invoicing/add")
-  };
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
 
   const handleChange = (event) => {
     setTime(event.target.value);
@@ -54,6 +54,117 @@ export default function Patients() {
           </Typography>
         </Stack>
       </Stack>
+      <Modal open={open} onClose={handleClose}>
+          <Box
+            sx={{
+              backgroundColor: "#fff",
+              borderRadius: "10px",
+              position: "absolute",
+              top: "50%",
+              left: "50%",
+              transform: "translate(-50%, -50%)",
+              width: 500,
+              borderRadius: "10px",
+              bgcolor: "background.paper",
+              p: 5,
+            }}
+          >
+            <Stack
+              direction="row"
+              alignItems="center"
+              sx={{ marginBottom: "20px" }}
+            >
+              <Typography variant="h5">Add Inventory Item</Typography>
+              <Button sx={{ marginLeft: "auto" }} onClick={handleClose}>
+                <CloseIcon />
+              </Button>
+            </Stack>
+            <Divider />
+            <Typography sx={{ paddingBottom: "10px", paddingTop: "20px" }}>
+              Item Name
+            </Typography>
+            <TextField
+              variant="outlined"
+              fullWidth
+              placeholder="Calpol"
+              sx={{ backgroundColor: "#F4F6F6" }}
+            ></TextField>
+            <Typography sx={{ paddingBottom: "10px", paddingTop: "20px" }}>
+              Category
+            </Typography>
+            <FormControl
+              variant="outlined"
+              fullWidth
+              placeholder="Choose category"
+              sx={{
+                marginTop: "0px",
+                marginLeft: "auto",
+                paddingTop: "0px",
+                backgroundColor:"#F4F6F6"
+              }}
+            >
+              <Select
+                labelId="demo-simple-select-label"
+                id="demo-simple-select"
+                label="Choose Option"
+                value={time}
+                onChange={handleChange}
+                placeholder="Choose Option"
+                fullWidth
+                defaultValue={10}
+                sx={{color:"#1c1c1c"}}
+              >
+                <MenuItem value={10}>Ten</MenuItem>
+                <MenuItem value={20}>Twenty</MenuItem>
+                <MenuItem value={30}>Thirty</MenuItem>
+              </Select>
+            </FormControl>
+            <Typography sx={{ paddingBottom: "10px", paddingTop: "20px" }}>
+              Brand
+            </Typography>
+            <TextField
+              variant="outlined"
+              fullWidth
+              placeholder="Cipla"
+              sx={{ backgroundColor: "#F4F6F6" }}
+            ></TextField>
+            <Typography sx={{ paddingBottom: "10px", paddingTop: "20px" }}>
+              Price(per unit)
+            </Typography>
+            <TextField
+              variant="outlined"
+              fullWidth
+              placeholder="450"
+              sx={{ backgroundColor: "#F4F6F6" }}
+            ></TextField>
+            <Typography sx={{ paddingBottom: "10px", paddingTop: "20px" }}>
+              Qty
+            </Typography>
+            <TextField
+              variant="outlined"
+              fullWidth
+              placeholder="Enter Qty"
+              sx={{ backgroundColor: "#F4F6F6" }}
+            ></TextField>
+            <Button
+              variant="contained"
+              fullWidth
+              sx={{
+                marginY: "20px",
+                marginTop: "40px",
+                paddingY: "10px",
+                marginLeft: "auto",
+                backgroundColor: "#3497F9",
+                boxShadow: "none",
+                py: 2,
+                borderRadius: "5px",
+              }}
+              onClick={handleSubmit}
+            >
+              Add Item
+            </Button>
+          </Box>
+        </Modal>
       <Box
         sx={{
           width: "95%",
