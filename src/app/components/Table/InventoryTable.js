@@ -10,18 +10,19 @@ import { Button } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 import QuestionMarkIcon from "@mui/icons-material/QuestionMark";
 
-function createData(name, calories, fat, carbs, protein, email) {
-  return { name, calories, fat, carbs, protein, email };
+function createData(name, calories, fat, carbs, protein, email, price) {
+  return { name, calories, fat, carbs, protein, email, price };
 }
 
 const rows = [
-  createData("Elizabeth Polson", "12003999102", "'NV-2902001", "RS. 2300", "Pending"),
-  createData("John David", "1200399320", "INV-2991001", "RS. 4005", "Pending"),
-  createData("Krishtav Rajan", "1200399989", "'NV-2991010", "RS. 5000", "Paid"),
-  createData("Sumanth Tinson", "'200393202", "'NV-299104S", "Rs, 10039", "Pending"),
-  createData("EG Subramani", "2993003011", "NV-2991123", "RS. 18990", "Pending"),
-  createData("Ranjan Moori", "12003999482", "'NV-299533", "RS, 9020", "Pending"),
-  createData("Philipile Gopal", "12003294001", "'NV-299533", "RS, 9020", "Pending")
+  createData("Lorem Ipsum", "Medicine", "Cipla", "100", "100","100","Rs120"),
+  createData("Lorem Ipsum", "Medicine", "Cipla", "100", "100","100","Rs120"),
+  createData("Lorem Ipsum", "Medicine", "Cipla", "100", "100","100","Rs120"),
+  createData("Lorem Ipsum", "Medicine", "Cipla", "100", "100","100","Rs120"),
+  createData("Lorem Ipsum", "Medicine", "Cipla", "100", "100","100","Rs120"),
+  createData("Lorem Ipsum", "Medicine", "Cipla", "100", "100","100","Rs120"),
+  createData("Lorem Ipsum", "Medicine", "Cipla", "100", "100","100","Rs120"),
+  createData("Lorem Ipsum", "Medicine", "Cipla", "100", "100","100","Rs120"),
 ]
 
 export default function BasicTable() {
@@ -35,12 +36,13 @@ export default function BasicTable() {
       >
         <TableHead>
           <TableRow>
-            <TableCell>Patient Name</TableCell>
-            <TableCell>Patient ID</TableCell>
-            <TableCell>Invoice No.</TableCell>
-            <TableCell>Pending Amt</TableCell>
-            <TableCell>Status</TableCell>
-            <TableCell></TableCell>
+            <TableCell>Item Name</TableCell>
+            <TableCell>Category</TableCell>
+            <TableCell>Brand</TableCell>
+            <TableCell>Last Added On</TableCell>
+            <TableCell>Last Added Qty</TableCell>
+            <TableCell>Avl Qty</TableCell>
+            <TableCell>Price</TableCell>
             <TableCell>User Action</TableCell>
           </TableRow>
         </TableHead>
@@ -58,6 +60,7 @@ export default function BasicTable() {
               <TableCell>{row.carbs}</TableCell>
               <TableCell>{row.protein}</TableCell>
               <TableCell>{row.email}</TableCell>
+              <TableCell>{row.price}</TableCell>
               <TableCell>
                 <Button sx={{border:"#FF6558 solid 1px", color:"#FF6558", minWidth:"20px", marginRight:"10px"}}>
                   <CloseIcon />
