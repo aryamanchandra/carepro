@@ -9,6 +9,8 @@ import Paper from "@mui/material/Paper";
 import { Button } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 import QuestionMarkIcon from "@mui/icons-material/QuestionMark";
+import CancelOutlinedIcon from '@mui/icons-material/CancelOutlined';
+import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 
 function createData(name, calories, fat, carbs, protein, email) {
   return { name, calories, fat, carbs, protein, email };
@@ -108,11 +110,11 @@ export default function BasicTable() {
               <TableCell>{row.protein}</TableCell>
               <TableCell>{row.email}</TableCell>
               <TableCell>
-                <Button sx={{border:"#FF6558 solid 1px", color:"#FF6558", minWidth:"20px", marginRight:"10px"}}>
-                  <CloseIcon />
+              <Button sx={{color:"#FF6558",  minWidth:"20px", marginRight:"10px"}}>
+                  <CancelOutlinedIcon sx={{fontSize:"25px",}} />
                 </Button>
-                <Button sx={{border:"#3497F9 solid 1px", color:"#3497F9", minWidth:"20px"}}>
-                  <QuestionMarkIcon />
+                <Button sx={{color:"#3497F9", minWidth:"20px"}}>
+                  <InfoOutlinedIcon sx={{fontSize:"25px",}} />
                 </Button>
               </TableCell>
             </TableRow>

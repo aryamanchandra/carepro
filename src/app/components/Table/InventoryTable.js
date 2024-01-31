@@ -9,21 +9,23 @@ import Paper from "@mui/material/Paper";
 import { Button } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 import QuestionMarkIcon from "@mui/icons-material/QuestionMark";
+import CancelOutlinedIcon from '@mui/icons-material/CancelOutlined';
+import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 
 function createData(name, calories, fat, carbs, protein, email, price) {
   return { name, calories, fat, carbs, protein, email, price };
 }
 
 const rows = [
-  createData("Lorem Ipsum", "Medicine", "Cipla", "100", "100","100","Rs120"),
-  createData("Lorem Ipsum", "Medicine", "Cipla", "100", "100","100","Rs120"),
-  createData("Lorem Ipsum", "Medicine", "Cipla", "100", "100","100","Rs120"),
-  createData("Lorem Ipsum", "Medicine", "Cipla", "100", "100","100","Rs120"),
-  createData("Lorem Ipsum", "Medicine", "Cipla", "100", "100","100","Rs120"),
-  createData("Lorem Ipsum", "Medicine", "Cipla", "100", "100","100","Rs120"),
-  createData("Lorem Ipsum", "Medicine", "Cipla", "100", "100","100","Rs120"),
-  createData("Lorem Ipsum", "Medicine", "Cipla", "100", "100","100","Rs120"),
-]
+  createData("Lorem Ipsum", "Medicine", "Cipla", "100", "100", "100", "Rs120"),
+  createData("Lorem Ipsum", "Medicine", "Cipla", "100", "100", "100", "Rs120"),
+  createData("Lorem Ipsum", "Medicine", "Cipla", "100", "100", "100", "Rs120"),
+  createData("Lorem Ipsum", "Medicine", "Cipla", "100", "100", "100", "Rs120"),
+  createData("Lorem Ipsum", "Medicine", "Cipla", "100", "100", "100", "Rs120"),
+  createData("Lorem Ipsum", "Medicine", "Cipla", "100", "100", "100", "Rs120"),
+  createData("Lorem Ipsum", "Medicine", "Cipla", "100", "100", "100", "Rs120"),
+  createData("Lorem Ipsum", "Medicine", "Cipla", "100", "100", "100", "Rs120"),
+];
 
 export default function BasicTable() {
   return (
@@ -62,11 +64,17 @@ export default function BasicTable() {
               <TableCell>{row.email}</TableCell>
               <TableCell>{row.price}</TableCell>
               <TableCell>
-                <Button sx={{border:"#FF6558 solid 1px", color:"#FF6558", minWidth:"20px", marginRight:"10px"}}>
-                  <CloseIcon />
+                <Button
+                  sx={{
+                    color: "#FF6558",
+                    minWidth: "20px",
+                    marginRight: "10px",
+                  }}
+                >
+                  <CancelOutlinedIcon sx={{ fontSize: "25px" }} />
                 </Button>
-                <Button sx={{border:"#3497F9 solid 1px", color:"#3497F9", minWidth:"20px"}}>
-                  <QuestionMarkIcon />
+                <Button sx={{ color: "#3497F9", minWidth: "20px" }}>
+                  <InfoOutlinedIcon sx={{ fontSize: "25px" }} />
                 </Button>
               </TableCell>
             </TableRow>
