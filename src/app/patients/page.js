@@ -95,7 +95,13 @@ export default function Patients() {
               variant="outlined"
               fullWidth
               placeholder="Krishnan Murthy"
-              sx={{ backgroundColor: "#F4F6F6" }}
+              InputProps={{
+                style: {
+                  borderRadius: "30px",
+                  backgroundColor: "#F4F6F6",
+                  paddingLeft: "10px",
+                },
+              }}
             ></TextField>
             <Typography sx={{ paddingBottom: "10px", paddingTop: "20px" }}>
               Contact Number
@@ -104,7 +110,13 @@ export default function Patients() {
               variant="outlined"
               fullWidth
               placeholder="+91-7004911197"
-              sx={{ backgroundColor: "#F4F6F6" }}
+              InputProps={{
+                style: {
+                  borderRadius: "30px",
+                  backgroundColor: "#F4F6F6",
+                  paddingLeft: "10px",
+                },
+              }}
             ></TextField>
             <Typography sx={{ paddingBottom: "10px", paddingTop: "20px" }}>
               Patient Type
@@ -117,7 +129,7 @@ export default function Patients() {
                 marginTop: "0px",
                 marginLeft: "auto",
                 paddingTop: "0px",
-                backgroundColor:"#F4F6F6"
+                backgroundColor: "#F4F6F6",
               }}
             >
               <Select
@@ -129,7 +141,8 @@ export default function Patients() {
                 placeholder="Choose Option"
                 fullWidth
                 defaultValue={10}
-                sx={{color:"#1c1c1c"}}
+                sx={{ borderRadius: "30px",color: "#1c1c1c", backgroundColor: "#F4F6F6" }}
+
               >
                 <MenuItem value={10}>Ten</MenuItem>
                 <MenuItem value={20}>Twenty</MenuItem>
@@ -196,25 +209,27 @@ export default function Patients() {
                 type="search"
                 placeholder="Search"
                 variant="outlined"
+                size="small"
                 InputProps={{
                   startAdornment: (
                     <InputAdornment position="start">
                       <SearchIcon />
                     </InputAdornment>
                   ),
-                }}
-                inputProps={{
                   style: {
-                    paddingX: "15",
-                    border: "none",
-                    paddingY: "10",
+                    borderRadius: "30px",
+                    backgroundColor: "#EBF5FF",
                   },
                 }}
                 sx={{
                   marginRight: "20px",
                 }}
               />
-              <DatePicker label="Filter by Date" />
+              <DatePicker
+                label="Filter by Date"
+                size="small"
+                slotProps={{ textField: { size: 'small', borderRadius:"20px" } }}
+              />
             </Stack>
             <PatientTable />
           </Box>

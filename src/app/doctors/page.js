@@ -81,26 +81,74 @@ export default function Patients() {
           </Stack>
           <Divider />
           <Typography sx={{ paddingBottom: "10px", paddingTop: "20px" }}>
-            Patient&apos;s Name
+            Doctor&apos;s Name
           </Typography>
           <TextField
-            variant="filled"
+            variant="outlined"
+            // size="small"
             fullWidth
             placeholder="Krishnan Murthy"
+            InputProps={{
+              style: {
+                borderRadius: "30px",
+                backgroundColor: "#F4F6F6",
+                paddingLeft: "10px",
+              },
+            }}
+          ></TextField>
+          <Typography sx={{ paddingBottom: "10px", paddingTop: "20px" }}>
+            Expertise
+          </Typography>
+          <TextField
+            variant="outlined"
+            // size="small"
+            fullWidth
+            placeholder="MBBS, Child Specialist"
+            InputProps={{
+              style: {
+                borderRadius: "30px",
+                backgroundColor: "#F4F6F6",
+                paddingLeft: "10px",
+              },
+            }}
           ></TextField>
           <Typography sx={{ paddingBottom: "10px", paddingTop: "20px" }}>
             Contact Number
           </Typography>
           <TextField
-            variant="filled"
+            variant="outlined"
             fullWidth
+            // size="small"
             placeholder="+91-7004911197"
+            InputProps={{
+              style: {
+                borderRadius: "30px",
+                backgroundColor: "#F4F6F6",
+                paddingLeft: "10px",
+              },
+            }}
           ></TextField>
           <Typography sx={{ paddingBottom: "10px", paddingTop: "20px" }}>
-            Patient Type
+            Email
+          </Typography>
+          <TextField
+            variant="outlined"
+            // size="small"
+            fullWidth
+            placeholder="john.doe@gmail.com"
+            InputProps={{
+              style: {
+                borderRadius: "30px",
+                backgroundColor: "#F4F6F6",
+                paddingLeft: "10px",
+              },
+            }}
+          ></TextField>
+          <Typography sx={{ paddingBottom: "10px", paddingTop: "20px" }}>
+            Gender
           </Typography>
           <FormControl
-            variant="filled"
+            variant="outlined"
             fullWidth
             placeholder="Choose Option"
             sx={{
@@ -117,10 +165,11 @@ export default function Patients() {
               onChange={handleChange}
               placeholder="Choose Option"
               fullWidth
+              // size="small"
+              sx={{ borderRadius: "30px", backgroundColor: "#F4F6F6" }}
             >
-              <MenuItem value={10}>Ten</MenuItem>
-              <MenuItem value={20}>Twenty</MenuItem>
-              <MenuItem value={30}>Thirty</MenuItem>
+              <MenuItem value={10}>Male</MenuItem>
+              <MenuItem value={20}>Female</MenuItem>
             </Select>
           </FormControl>
           <Button
@@ -174,22 +223,17 @@ export default function Patients() {
               type="search"
               placeholder="Search"
               variant="outlined"
+              size="small"
               InputProps={{
                 startAdornment: (
                   <InputAdornment position="start">
                     <SearchIcon />
                   </InputAdornment>
                 ),
-              }}
-              inputProps={{
                 style: {
-                  paddingX: "15",
-                  border: "none",
-                  paddingY: "10",
+                  borderRadius: "30px",
+                  backgroundColor: "#EBF5FF",
                 },
-              }}
-              sx={{
-                marginRight: "20px",
               }}
             />
           </Stack>
