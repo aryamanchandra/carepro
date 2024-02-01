@@ -111,8 +111,7 @@ export default function Add() {
             textColor="#3497F9"
           >
             <Tab label="Registration Form" {...a11yProps(0)} />
-            <Tab label="Risk Coverage Declaration" {...a11yProps(1)} />
-            <Tab label="Documents" {...a11yProps(2)} />
+            <Tab label="Documents" {...a11yProps(1)} />
           </Tabs>
         </Box>
         <CustomTabPanel value={value} index={0}>
@@ -120,9 +119,6 @@ export default function Add() {
         </CustomTabPanel>
         <CustomTabPanel value={value} index={1}>
           Item Two
-        </CustomTabPanel>
-        <CustomTabPanel value={value} index={2}>
-          Item Three
         </CustomTabPanel>
       </Box>
     </Box>

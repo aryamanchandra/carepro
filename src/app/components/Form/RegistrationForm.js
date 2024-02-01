@@ -32,6 +32,13 @@ export default function RegistrationForm() {
             variant="outlined"
             placeholder="Krishnan Murthy"
             className="input"
+            InputProps={{
+              style: {
+                borderRadius: "30px",
+                backgroundColor: "#F4F6F6",
+                paddingLeft: "10px",
+              },
+            }}
           ></TextField>
         </Stack>
         <Stack direction="column">
@@ -42,6 +49,13 @@ export default function RegistrationForm() {
             variant="outlined"
             placeholder="+91-7004911197"
             className="input"
+            InputProps={{
+              style: {
+                borderRadius: "30px",
+                backgroundColor: "#F4F6F6",
+                paddingLeft: "10px",
+              },
+            }}
           ></TextField>
         </Stack>
         <Stack direction="column">
@@ -52,6 +66,13 @@ export default function RegistrationForm() {
             variant="outlined"
             placeholder="+91-7004911197"
             className="input"
+            InputProps={{
+              style: {
+                borderRadius: "30px",
+                backgroundColor: "#F4F6F6",
+                paddingLeft: "10px",
+              },
+            }}
           ></TextField>
         </Stack>
       </Stack>
@@ -122,6 +143,13 @@ export default function RegistrationForm() {
             variant="outlined"
             placeholder="Indian"
             className="input"
+            InputProps={{
+              style: {
+                borderRadius: "30px",
+                backgroundColor: "#F4F6F6",
+                paddingLeft: "10px",
+              },
+            }}
           ></TextField>
         </Stack>
       </Stack>
@@ -134,6 +162,13 @@ export default function RegistrationForm() {
           fullWidth
           placeholder="Indian"
           className="input"
+          InputProps={{
+            style: {
+              borderRadius: "30px",
+              backgroundColor: "#F4F6F6",
+              paddingLeft: "10px",
+            },
+          }}
         ></TextField>
       </Stack>
       <FormControl>
@@ -193,6 +228,13 @@ export default function RegistrationForm() {
             variant="outlined"
             placeholder="Krishnan Murthy"
             className="input"
+            InputProps={{
+              style: {
+                borderRadius: "30px",
+                backgroundColor: "#F4F6F6",
+                paddingLeft: "10px",
+              },
+            }}
           ></TextField>
         </Stack>
         <Stack direction="column">
@@ -203,6 +245,13 @@ export default function RegistrationForm() {
             variant="outlined"
             placeholder="+91-7004911197"
             className="input"
+            InputProps={{
+              style: {
+                borderRadius: "30px",
+                backgroundColor: "#F4F6F6",
+                paddingLeft: "10px",
+              },
+            }}
           ></TextField>
         </Stack>
         <Stack direction="column">
@@ -213,6 +262,13 @@ export default function RegistrationForm() {
             variant="outlined"
             placeholder="+91-7004911197"
             className="input"
+            InputProps={{
+              style: {
+                borderRadius: "30px",
+                backgroundColor: "#F4F6F6",
+                paddingLeft: "10px",
+              },
+            }}
           ></TextField>
         </Stack>
       </Stack>
@@ -225,6 +281,13 @@ export default function RegistrationForm() {
           fullWidth
           placeholder="Indian"
           className="input"
+          InputProps={{
+            style: {
+              borderRadius: "30px",
+              backgroundColor: "#F4F6F6",
+              paddingLeft: "10px",
+            },
+          }}
         ></TextField>
       </Stack>
       <Typography variant="h6" sx={{ marginTop: "40px" }}>
@@ -240,6 +303,13 @@ export default function RegistrationForm() {
             variant="outlined"
             placeholder="Krishnan Murthy"
             className="input"
+            InputProps={{
+              style: {
+                borderRadius: "30px",
+                backgroundColor: "#F4F6F6",
+                paddingLeft: "10px",
+              },
+            }}
           ></TextField>
         </Stack>
         <Stack direction="column">
@@ -250,6 +320,13 @@ export default function RegistrationForm() {
             variant="outlined"
             placeholder="+91-7004911197"
             className="input"
+            InputProps={{
+              style: {
+                borderRadius: "30px",
+                backgroundColor: "#F4F6F6",
+                paddingLeft: "10px",
+              },
+            }}
           ></TextField>
         </Stack>
       </Stack>
@@ -266,6 +343,13 @@ export default function RegistrationForm() {
             variant="outlined"
             placeholder="Krishnan Murthy"
             className="input"
+            InputProps={{
+              style: {
+                borderRadius: "30px",
+                backgroundColor: "#F4F6F6",
+                paddingLeft: "10px",
+              },
+            }}
           ></TextField>
         </Stack>
         <Stack direction="column">
@@ -277,6 +361,13 @@ export default function RegistrationForm() {
             placeholder="+91-7004911197"
             fullWidth
             className="input"
+            InputProps={{
+              style: {
+                borderRadius: "30px",
+                backgroundColor: "#F4F6F6",
+                paddingLeft: "10px",
+              },
+            }}
           ></TextField>
         </Stack>
       </Stack>
