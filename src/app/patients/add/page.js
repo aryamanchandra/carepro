@@ -15,6 +15,7 @@ import PropTypes from "prop-types";
 import RegistrationForm from "@/app/components/Form/RegistrationForm";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import DocumentUploadPage from "@/app/components/Form/Document";
+import OPDForm from "@/app/components/Form/OPDForm";
 
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -52,6 +53,8 @@ function a11yProps(index) {
 export default function Add() {
   const [value, setValue] = useState(0);
 
+  const input="OPD";
+
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
@@ -78,7 +81,12 @@ export default function Add() {
         </Button>
       </Link>
       <Box
-        sx={{ backgroundColor: "#fff", borderRadius: "20px", padding: "30px", paddingX:"40px" }}
+        sx={{
+          backgroundColor: "#fff",
+          borderRadius: "20px",
+          padding: "30px",
+          paddingX: "40px",
+        }}
       >
         <Stack
           direction="row"
@@ -94,7 +102,7 @@ export default function Add() {
               backgroundColor: "#3497F9",
               boxShadow: "none",
               py: 1,
-              px:3,
+              px: 3,
               borderRadius: "5px",
             }}
           >
@@ -116,7 +124,7 @@ export default function Add() {
           </Tabs>
         </Box>
         <CustomTabPanel value={value} index={0}>
-          <RegistrationForm />
+          {input == "IPD" ? <RegistrationForm /> : <OPDForm />}
         </CustomTabPanel>
         <CustomTabPanel value={value} index={1}>
           <DocumentUploadPage />

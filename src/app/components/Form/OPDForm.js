@@ -14,7 +14,7 @@ import {
 import { useState } from "react";
 import "./RegistrationForm.css";
 
-export default function RegistrationForm() {
+export default function OPDForm() {
   const [time, setTime] = useState("");
 
   const handleChange = (event) => {
