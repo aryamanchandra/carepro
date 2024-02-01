@@ -54,7 +54,7 @@ export default function Patients() {
           </Typography>
         </Stack>
       </Stack>
-      <Modal open={open} onClose={handleClose}>
+      <Modal open={open} onClose={handleClose} sx={{overflowY:"scroll"}}>
         <Box
           sx={{
             backgroundColor: "#fff",
@@ -66,7 +66,9 @@ export default function Patients() {
             width: 500,
             borderRadius: "10px",
             bgcolor: "background.paper",
+            // height:"100%",
             p: 5,
+            my:10
           }}
         >
           <Stack
@@ -175,7 +177,7 @@ export default function Patients() {
           <Button
             variant="contained"
             fullWidth
-            sx={{ marginY: "20px", marginTop: "40px", paddingY: "10px" }}
+            sx={{ marginY: "20px", marginTop: "40px", paddingY: "10px", borderRadius:"8px" , textTransform:"capitalize", backgroundColor:"#3497F9" }}
             onClick={handleSubmit}
           >
             Add New Doctor

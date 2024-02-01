@@ -54,7 +54,7 @@ export default function Patients() {
           </Typography>
         </Stack>
       </Stack>
-      <Modal open={open} onClose={handleClose}>
+      <Modal open={open} onClose={handleClose} sx={{overflowY:"scroll"}}>
           <Box
             sx={{
               backgroundColor: "#fff",
@@ -67,6 +67,7 @@ export default function Patients() {
               borderRadius: "10px",
               bgcolor: "background.paper",
               p: 5,
+              my:10,
             }}
           >
             <Stack
@@ -87,7 +88,13 @@ export default function Patients() {
               variant="outlined"
               fullWidth
               placeholder="Calpol"
-              sx={{ backgroundColor: "#F4F6F6" }}
+              InputProps={{
+                style: {
+                  borderRadius: "30px",
+                  backgroundColor: "#F4F6F6",
+                  paddingLeft: "10px",
+                },
+              }}
             ></TextField>
             <Typography sx={{ paddingBottom: "10px", paddingTop: "20px" }}>
               Category
@@ -100,7 +107,6 @@ export default function Patients() {
                 marginTop: "0px",
                 marginLeft: "auto",
                 paddingTop: "0px",
-                backgroundColor:"#F4F6F6"
               }}
             >
               <Select
@@ -112,7 +118,7 @@ export default function Patients() {
                 placeholder="Choose Option"
                 fullWidth
                 defaultValue={10}
-                sx={{color:"#1c1c1c"}}
+                sx={{ borderRadius: "30px",color: "#1c1c1c", backgroundColor: "#F4F6F6" }}
               >
                 <MenuItem value={10}>Ten</MenuItem>
                 <MenuItem value={20}>Twenty</MenuItem>
@@ -126,7 +132,13 @@ export default function Patients() {
               variant="outlined"
               fullWidth
               placeholder="Cipla"
-              sx={{ backgroundColor: "#F4F6F6" }}
+              InputProps={{
+                style: {
+                  borderRadius: "30px",
+                  backgroundColor: "#F4F6F6",
+                  paddingLeft: "10px",
+                },
+              }}
             ></TextField>
             <Typography sx={{ paddingBottom: "10px", paddingTop: "20px" }}>
               Price(per unit)
@@ -135,7 +147,13 @@ export default function Patients() {
               variant="outlined"
               fullWidth
               placeholder="450"
-              sx={{ backgroundColor: "#F4F6F6" }}
+              InputProps={{
+                style: {
+                  borderRadius: "30px",
+                  backgroundColor: "#F4F6F6",
+                  paddingLeft: "10px",
+                },
+              }}
             ></TextField>
             <Typography sx={{ paddingBottom: "10px", paddingTop: "20px" }}>
               Qty
@@ -144,7 +162,13 @@ export default function Patients() {
               variant="outlined"
               fullWidth
               placeholder="Enter Qty"
-              sx={{ backgroundColor: "#F4F6F6" }}
+              InputProps={{
+                style: {
+                  borderRadius: "30px",
+                  backgroundColor: "#F4F6F6",
+                  paddingLeft: "10px",
+                },
+              }}
             ></TextField>
             <Button
               variant="contained"
@@ -206,22 +230,17 @@ export default function Patients() {
               type="search"
               placeholder="Search"
               variant="outlined"
+              size="small"
               InputProps={{
                 startAdornment: (
                   <InputAdornment position="start">
                     <SearchIcon />
                   </InputAdornment>
                 ),
-              }}
-              inputProps={{
                 style: {
-                  paddingX: "15",
-                  border: "none",
-                  paddingY: "10",
+                  borderRadius: "30px",
+                  backgroundColor: "#EBF5FF",
                 },
-              }}
-              sx={{
-                marginRight: "20px",
               }}
             />
           </Stack>

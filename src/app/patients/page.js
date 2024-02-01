@@ -62,7 +62,7 @@ export default function Patients() {
             </Typography>
           </Stack>
         </Stack>
-        <Modal open={open} onClose={handleClose}>
+        <Modal open={open} onClose={handleClose} sx={{overflowY:"scroll"}}>
           <Box
             sx={{
               backgroundColor: "#fff",
@@ -75,6 +75,7 @@ export default function Patients() {
               borderRadius: "10px",
               bgcolor: "background.paper",
               p: 5,
+              my:10,
             }}
           >
             <Stack
