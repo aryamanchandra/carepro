@@ -30,7 +30,7 @@ export default function RegistrationForm() {
   };
   return (
     <Box>
-      <Stack direction="row" sx={{ paddingTop: "30px" }}>
+      <Stack direction="row" sx={{ paddingTop: "30px" }} alignItems="center">
         <Typography variant="h3" sx={{ paddingRight: "10px" }}>
           Invoice
         </Typography>
@@ -39,6 +39,14 @@ export default function RegistrationForm() {
           disabled="true"
           placeholder="eg: 2039001"
           className="input"
+          size="small"
+          InputProps={{
+            style: {
+              borderRadius: "30px",
+              backgroundColor: "#F4F6F6",
+              paddingLeft: "10px",
+            },
+          }}
         />
       </Stack>
       <Stack direction="row" gap={4}>
@@ -54,6 +62,14 @@ export default function RegistrationForm() {
             variant="outlined"
             placeholder="Choose Date"
             className="input"
+            size="small"
+            InputProps={{
+              style: {
+                borderRadius: "30px",
+                backgroundColor: "#F4F6F6",
+                paddingLeft: "10px",
+              },
+            }}
           ></TextField>
         </Stack>
         <Stack direction="column">
@@ -67,6 +83,14 @@ export default function RegistrationForm() {
             variant="outlined"
             placeholder="Choose Date"
             className="input"
+            size="small"
+            InputProps={{
+              style: {
+                borderRadius: "30px",
+                backgroundColor: "#F4F6F6",
+                paddingLeft: "10px",
+              },
+            }}
           ></TextField>
         </Stack>
       </Stack>
@@ -82,6 +106,14 @@ export default function RegistrationForm() {
             variant="outlined"
             placeholder="Patient ID"
             className="input"
+            size="small"
+            InputProps={{
+              style: {
+                borderRadius: "30px",
+                backgroundColor: "#F4F6F6",
+                paddingLeft: "10px",
+              },
+            }}
           ></TextField>
         </Stack>
         <Stack direction="column">
@@ -95,6 +127,14 @@ export default function RegistrationForm() {
             variant="outlined"
             placeholder="Krishna Murthy"
             className="input"
+            size="small"
+            InputProps={{
+              style: {
+                borderRadius: "30px",
+                backgroundColor: "#F4F6F6",
+                paddingLeft: "10px",
+              },
+            }}
           ></TextField>
         </Stack>
       </Stack>
@@ -110,6 +150,14 @@ export default function RegistrationForm() {
           fullWidth
           placeholder="Indian"
           className="input"
+          size="small"
+          InputProps={{
+            style: {
+              borderRadius: "30px",
+              backgroundColor: "#F4F6F6",
+              paddingLeft: "10px",
+            },
+          }}
         ></TextField>
       </Stack>
       <Table>
@@ -123,54 +171,72 @@ export default function RegistrationForm() {
         </TableHead>
         <TableBody>
           <TableRow>
-            <TableCell>
-              <Typography
-                sx={{
-                  background: "#F4F6F6",
-                  borderRadius: "40px",
-                  padding: "10px",
-                  paddingX: "20px",
+            <TableCell sx={{paddingX:1}}>
+              <TextField
+                variant="outlined"
+                fullWidth
+                placeholder="Ultra Sound"
+                className="input"
+                size="small"
+                InputProps={{
+                  style: {
+                    borderRadius: "30px",
+                    backgroundColor: "#F4F6F6",
+                    paddingLeft: "5px",
+                  },
+                }}
+              ></TextField>
+            </TableCell>
+            <TableCell sx={{paddingX:1}}>
+              <TextField
+                variant="outlined"
+                fullWidth
+                placeholder="Rs. 2,000"
+                className="input"
+                size="small"
+                InputProps={{
+                  style: {
+                    borderRadius: "30px",
+                    backgroundColor: "#F4F6F6",
+                    paddingLeft: "10px",
+                  },
                 }}
               >
-                Ultra Sound
-              </Typography>
+              </TextField>{" "}
             </TableCell>
-            <TableCell>
-              <Typography
-                sx={{
-                  background: "#F4F6F6",
-                  borderRadius: "40px",
-                  padding: "10px",
-                  paddingX: "20px",
+            <TableCell sx={{paddingX:1}}>
+              <TextField
+                variant="outlined"
+                fullWidth
+                placeholder="1"
+                className="input"
+                size="small"
+                InputProps={{
+                  style: {
+                    borderRadius: "30px",
+                    backgroundColor: "#F4F6F6",
+                    paddingLeft: "10px",
+                  },
                 }}
               >
-                Rs. 2,000
-              </Typography>{" "}
+              </TextField>{" "}
             </TableCell>
-            <TableCell>
-              <Typography
-                sx={{
-                  background: "#F4F6F6",
-                  borderRadius: "40px",
-                  padding: "10px",
-                  paddingX: "20px",
-                }}
-              >
-                1
-              </Typography>{" "}
-            </TableCell>
-            <TableCell alignItems="center">
+            <TableCell alignItems="center" sx={{paddingX:1}}>
               <Stack direction="row">
-                <Typography
-                  sx={{
-                    background: "#F4F6F6",
-                    borderRadius: "40px",
-                    padding: "10px",
-                    paddingX: "20px",
+                <TextField
+                  variant="outlined"
+                  fullWidth
+                  placeholder="Rs. 2000"
+                  className="input"
+                  size="small"
+                  InputProps={{
+                    style: {
+                      borderRadius: "30px",
+                      backgroundColor: "#F4F6F6",
+                      paddingLeft: "10px",
+                    },
                   }}
-                >
-                  Rs. 2,000
-                </Typography>
+                ></TextField>
                 <Button
                   sx={{ color: "#000", minWidth: "20px", marginRight: "10px" }}
                 >
@@ -181,9 +247,14 @@ export default function RegistrationForm() {
           </TableRow>
         </TableBody>
       </Table>
-      <Stack direction="row" sx={{ borderBottom:"1px solid #ddd"}}>
+      <Stack direction="row" sx={{ borderBottom: "1px solid #ddd" }}>
         <Button
-          sx={{ marginLeft: "auto", marginRight: "auto", padding:"15px", color:"#3497F9"}}
+          sx={{
+            marginLeft: "auto",
+            marginRight: "auto",
+            padding: "15px",
+            color: "#3497F9",
+          }}
           startIcon={<AddIcon />}
         >
           <Typography>Add Item</Typography>

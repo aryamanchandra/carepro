@@ -95,22 +95,17 @@ export default function Patients() {
               type="search"
               placeholder="Search"
               variant="outlined"
+              size="small"
               InputProps={{
                 startAdornment: (
                   <InputAdornment position="start">
                     <SearchIcon />
                   </InputAdornment>
                 ),
-              }}
-              inputProps={{
                 style: {
-                  paddingX: "15",
-                  border: "none",
-                  paddingY: "10",
+                  borderRadius: "30px",
+                  backgroundColor: "#EBF5FF",
                 },
-              }}
-              sx={{
-                marginRight: "20px",
               }}
             />
           </Stack>
