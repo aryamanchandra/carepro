@@ -28,6 +28,24 @@ export default function RegistrationForm() {
   const handleChange = (event) => {
     setTime(event.target.value);
   };
+
+  const [items, setItems] = useState([
+    { item: "", cost: "", qty: "", total: "" }, // Initial empty item
+  ]);
+
+  const addItem = () => {
+    const lastItem = items[items.length - 1];
+    const newItem = { ...lastItem }; // Copy values from the last item
+    setItems([...items, newItem]);
+  };
+  
+
+  const handleItemChange = (index, key, value) => {
+    const newItems = [...items];
+    newItems[index][key] = value;
+    setItems(newItems);
+  };
+
   return (
     <Box>
       <Stack direction="row" sx={{ paddingTop: "30px" }} alignItems="center">
@@ -170,64 +188,14 @@ export default function RegistrationForm() {
           </TableRow>
         </TableHead>
         <TableBody>
-          <TableRow>
-            <TableCell sx={{paddingX:1}}>
-              <TextField
-                variant="outlined"
-                fullWidth
-                placeholder="Ultra Sound"
-                className="input"
-                size="small"
-                InputProps={{
-                  style: {
-                    borderRadius: "30px",
-                    backgroundColor: "#F4F6F6",
-                    paddingLeft: "5px",
-                  },
-                }}
-              ></TextField>
-            </TableCell>
-            <TableCell sx={{paddingX:1}}>
-              <TextField
-                variant="outlined"
-                fullWidth
-                placeholder="Rs. 2,000"
-                className="input"
-                size="small"
-                InputProps={{
-                  style: {
-                    borderRadius: "30px",
-                    backgroundColor: "#F4F6F6",
-                    paddingLeft: "10px",
-                  },
-                }}
-              >
-              </TextField>{" "}
-            </TableCell>
-            <TableCell sx={{paddingX:1}}>
-              <TextField
-                variant="outlined"
-                fullWidth
-                placeholder="1"
-                className="input"
-                size="small"
-                InputProps={{
-                  style: {
-                    borderRadius: "30px",
-                    backgroundColor: "#F4F6F6",
-                    paddingLeft: "10px",
-                  },
-                }}
-              >
-              </TextField>{" "}
-            </TableCell>
-            <TableCell alignItems="center" sx={{paddingX:1}}>
-              <Stack direction="row">
+          {items.map((item, index) => (
+            <TableRow key={index}>
+              <TableCell sx={{paddingX:1}}>
                 <TextField
                   variant="outlined"
                   fullWidth
-                  placeholder="Rs. 2000"
-                  className="input"
+                  placeholder="Item"
+                  value={item.item}
                   size="small"
                   InputProps={{
                     style: {
@@ -236,15 +204,84 @@ export default function RegistrationForm() {
                       paddingLeft: "10px",
                     },
                   }}
-                ></TextField>
-                <Button
-                  sx={{ color: "#000", minWidth: "20px", marginRight: "10px" }}
-                >
-                  <CloseIcon />
-                </Button>
-              </Stack>
-            </TableCell>
-          </TableRow>
+                  onChange={(e) =>
+                    handleItemChange(index, "item", e.target.value)
+                  }
+                />
+              </TableCell>
+              <TableCell sx={{paddingX:1}}>
+                <TextField
+                  variant="outlined"
+                  fullWidth
+                  placeholder="Cost"
+                  value={item.cost}
+                  size="small"
+                  InputProps={{
+                    style: {
+                      borderRadius: "30px",
+                      backgroundColor: "#F4F6F6",
+                      paddingLeft: "10px",
+                    },
+                  }}
+                  onChange={(e) =>
+                    handleItemChange(index, "cost", e.target.value)
+                  }
+                />
+              </TableCell>
+              <TableCell sx={{paddingX:1}}>
+                <TextField
+                  variant="outlined"
+                  fullWidth
+                  placeholder="Qty"
+                  value={item.qty}
+                  size="small"
+                  InputProps={{
+                    style: {
+                      borderRadius: "30px",
+                      backgroundColor: "#F4F6F6",
+                      paddingLeft: "10px",
+                    },
+                  }}
+                  onChange={(e) =>
+                    handleItemChange(index, "qty", e.target.value)
+                  }
+                />
+              </TableCell>
+              <TableCell sx={{paddingX:1}}>
+                <Stack direction="row">
+                  <TextField
+                    variant="outlined"
+                    fullWidth
+                    placeholder="Total"
+                    value={item.total}
+                    size="small"
+                    InputProps={{
+                      style: {
+                        borderRadius: "30px",
+                        backgroundColor: "#F4F6F6",
+                        paddingLeft: "10px",
+                      },
+                    }}
+                    onChange={(e) =>
+                      handleItemChange(index, "total", e.target.value)
+                    }
+                  />
+                  {index > 0 && ( // Render close icon for all items except the first one
+                    <Button
+                      onClick={() => {
+                        const newItems = [...items];
+                        newItems.splice(index, 1);
+                        setItems(newItems);
+                      }}
+                      sx={{ color: "#000", minWidth: "20px", marginRight: "10px" }}
+                    >
+                      <CloseIcon />
+                    </Button>
+                  )}
+                </Stack>
+              </TableCell>
+            </TableRow>
+          ))}
         </TableBody>
       </Table>
       <Stack direction="row" sx={{ borderBottom: "1px solid #ddd" }}>
@@ -256,6 +293,7 @@ export default function RegistrationForm() {
             color: "#3497F9",
           }}
           startIcon={<AddIcon />}
+          onClick={addItem}
         >
           <Typography>Add Item</Typography>
         </Button>
