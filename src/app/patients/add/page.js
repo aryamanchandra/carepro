@@ -14,6 +14,7 @@ import { useState } from "react";
 import PropTypes from "prop-types";
 import RegistrationForm from "@/app/components/Form/RegistrationForm";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
+import DocumentUploadPage from "@/app/components/Form/Document";
 
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -118,7 +119,7 @@ export default function Add() {
           <RegistrationForm />
         </CustomTabPanel>
         <CustomTabPanel value={value} index={1}>
-          Item Two
+          <DocumentUploadPage />
         </CustomTabPanel>
       </Box>
     </Box>

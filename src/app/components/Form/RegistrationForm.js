@@ -23,7 +23,7 @@ export default function RegistrationForm() {
   return (
     <Box>
       <Stack direction="row" gap={4}>
-        <Stack direction="column">
+        <Stack direction="column" sx={{width:"100%"}}>
           <Typography sx={{ paddingBottom: "10px", paddingTop: "20px" }} className="input-label">
             Patient&apos;s Name
           </Typography>
@@ -41,7 +41,7 @@ export default function RegistrationForm() {
             }}
           ></TextField>
         </Stack>
-        <Stack direction="column">
+        <Stack direction="column" sx={{width:"100%"}}>
           <Typography sx={{ paddingBottom: "10px", paddingTop: "20px" }} className="input-label">
             Father&apos;s/Husband/Guardian&apos;s Name
           </Typography>
@@ -58,7 +58,7 @@ export default function RegistrationForm() {
             }}
           ></TextField>
         </Stack>
-        <Stack direction="column">
+        <Stack direction="column" sx={{width:"100%"}}>
           <Typography sx={{ paddingBottom: "10px", paddingTop: "20px" }} className="input-label">
             Admission Date
           </Typography>
@@ -77,7 +77,7 @@ export default function RegistrationForm() {
         </Stack>
       </Stack>
       <Stack direction="row" gap={4}>
-        <Stack direction="column">
+        <Stack direction="column" sx={{width:"100%"}}>
           <Typography sx={{ paddingBottom: "10px", paddingTop: "20px" }}className="input-label">
             Sex
           </Typography>
@@ -88,7 +88,7 @@ export default function RegistrationForm() {
               marginTop: "0px",
               marginLeft: "auto",
               paddingTop: "0px",
-              width: "200px",
+              width: "100%",
             }}
           >
             <Select
@@ -99,6 +99,7 @@ export default function RegistrationForm() {
               onChange={handleChange}
               placeholder="Choose Option"
               className="input"
+              sx={{ borderRadius: "30px",color: "#1c1c1c", backgroundColor: "#F4F6F6" }}
             >
               <MenuItem value={10}>Ten</MenuItem>
               <MenuItem value={20}>Twenty</MenuItem>
@@ -106,7 +107,7 @@ export default function RegistrationForm() {
             </Select>
           </FormControl>
         </Stack>
-        <Stack direction="column">
+        <Stack direction="column" sx={{width:"100%"}}>
           <Typography sx={{ paddingBottom: "10px", paddingTop: "20px" }} className="input-label">
             Marital Status
           </Typography>
@@ -117,7 +118,7 @@ export default function RegistrationForm() {
               marginTop: "0px",
               marginLeft: "auto",
               paddingTop: "0px",
-              width: "200px",
+              width: "100%",
             }}
           >
             <Select
@@ -128,6 +129,7 @@ export default function RegistrationForm() {
               onChange={handleChange}
               placeholder="Choose Option"
               className="input"
+              sx={{ borderRadius: "30px",color: "#1c1c1c", backgroundColor: "#F4F6F6" }}
             >
               <MenuItem value={10}>Ten</MenuItem>
               <MenuItem value={20}>Twenty</MenuItem>
@@ -135,7 +137,7 @@ export default function RegistrationForm() {
             </Select>
           </FormControl>
         </Stack>
-        <Stack direction="column">
+        <Stack direction="column" sx={{width:"100%"}}>
           <Typography sx={{ paddingBottom: "10px", paddingTop: "20px" }} className="input-label">
             Nationality
           </Typography>
@@ -181,37 +183,37 @@ export default function RegistrationForm() {
           name="row-radio-buttons-group"
         >
           <FormControlLabel
-            value="female"
+            value="defence"
             control={<Radio />}
             label="Defence Service"
           />
           <FormControlLabel
-            value="male"
+            value="business"
             control={<Radio />}
             label="Business/Industrialist"
           />
           <FormControlLabel
-            value="other"
+            value="agriculture"
             control={<Radio />}
             label="Agriculture Doctor"
           />
           <FormControlLabel
-            value="female"
+            value="professionals"
             control={<Radio />}
             label="Professionals"
           />
           <FormControlLabel value="male" control={<Radio />} label="Diplomat" />
           <FormControlLabel
-            value="other"
+            value="govt"
             control={<Radio />}
             label="Govt/PSU Employee"
           />
           <FormControlLabel
-            value="female"
+            value="private"
             control={<Radio />}
             label="Private Services"
           />
-          <FormControlLabel value="male" control={<Radio />} label="Staff" />
+          <FormControlLabel value="staff" control={<Radio />} label="Staff" />
           <FormControlLabel value="other" control={<Radio />} label="Others" />
         </RadioGroup>
       </FormControl>
@@ -219,7 +221,7 @@ export default function RegistrationForm() {
         Emergency Contact
       </Typography>
       <Stack direction="row" gap={4}>
-        <Stack direction="column">
+        <Stack direction="column" sx={{width:"100%"}}>
           <Typography sx={{ paddingBottom: "10px", paddingTop: "20px" }} className="input-label">
             Name of the person to be notified{" "}
           </Typography>
@@ -237,7 +239,7 @@ export default function RegistrationForm() {
             }}
           ></TextField>
         </Stack>
-        <Stack direction="column">
+        <Stack direction="column" sx={{width:"100%"}}>
           <Typography sx={{ paddingBottom: "10px", paddingTop: "20px" }} className="input-label">
             Relationship with the patient{" "}
           </Typography>
@@ -254,7 +256,7 @@ export default function RegistrationForm() {
             }}
           ></TextField>
         </Stack>
-        <Stack direction="column">
+        <Stack direction="column" sx={{width:"100%"}}>
           <Typography sx={{ paddingBottom: "10px", paddingTop: "20px" }} className="input-label">
             Contact No.{" "}
           </Typography>
@@ -334,7 +336,7 @@ export default function RegistrationForm() {
         Reference Detail (Optional)
       </Typography>
       <Stack direction="row" gap={4}>
-        <Stack direction="column">
+        <Stack direction="column" sx={{width:"100%"}}>
           <Typography sx={{ paddingBottom: "10px", paddingTop: "20px" }} className="input-label">
             Referrer Doctor
           </Typography>
@@ -352,7 +354,7 @@ export default function RegistrationForm() {
             }}
           ></TextField>
         </Stack>
-        <Stack direction="column">
+        <Stack direction="column" sx={{width:"100%"}}>
           <Typography sx={{ paddingBottom: "10px", paddingTop: "20px" }} className="input-label">
             Referrer Address
           </Typography>
