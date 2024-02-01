@@ -30,15 +30,14 @@ export default function RegistrationForm() {
   };
 
   const [items, setItems] = useState([
-    { item: "", cost: "", qty: "", total: "" }, // Initial empty item
+    { item: "", cost: "", qty: "", total: "", disabled: true },
   ]);
 
   const addItem = () => {
     const lastItem = items[items.length - 1];
-    const newItem = { ...lastItem }; // Copy values from the last item
+    const newItem = { ...lastItem };
     setItems([...items, newItem]);
   };
-  
 
   const handleItemChange = (index, key, value) => {
     const newItems = [...items];
@@ -190,8 +189,9 @@ export default function RegistrationForm() {
         <TableBody>
           {items.map((item, index) => (
             <TableRow key={index}>
-              <TableCell sx={{paddingX:1}}>
+              <TableCell sx={{ paddingX: 1 }}>
                 <TextField
+                  disabled={index > 0 && item.disabled}
                   variant="outlined"
                   fullWidth
                   placeholder="Item"
@@ -209,8 +209,9 @@ export default function RegistrationForm() {
                   }
                 />
               </TableCell>
-              <TableCell sx={{paddingX:1}}>
+              <TableCell sx={{ paddingX: 1 }}>
                 <TextField
+                  disabled={index > 0 && item.disabled}
                   variant="outlined"
                   fullWidth
                   placeholder="Cost"
@@ -228,8 +229,9 @@ export default function RegistrationForm() {
                   }
                 />
               </TableCell>
-              <TableCell sx={{paddingX:1}}>
+              <TableCell sx={{ paddingX: 1 }}>
                 <TextField
+                  disabled={index > 0 && item.disabled}
                   variant="outlined"
                   fullWidth
                   placeholder="Qty"
@@ -247,9 +249,10 @@ export default function RegistrationForm() {
                   }
                 />
               </TableCell>
-              <TableCell sx={{paddingX:1}}>
+              <TableCell sx={{ paddingX: 1 }}>
                 <Stack direction="row">
                   <TextField
+                    disabled={index > 0 && item.disabled}
                     variant="outlined"
                     fullWidth
                     placeholder="Total"
@@ -273,7 +276,11 @@ export default function RegistrationForm() {
                         newItems.splice(index, 1);
                         setItems(newItems);
                       }}
-                      sx={{ color: "#000", minWidth: "20px", marginRight: "10px" }}
+                      sx={{
+                        color: "#000",
+                        minWidth: "20px",
+                        marginRight: "10px",
+                      }}
                     >
                       <CloseIcon />
                     </Button>

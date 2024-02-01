@@ -130,7 +130,6 @@ export default function Patients() {
                 marginTop: "0px",
                 marginLeft: "auto",
                 paddingTop: "0px",
-                backgroundColor: "#F4F6F6",
               }}
             >
               <Select
@@ -229,7 +228,12 @@ export default function Patients() {
               <DatePicker
                 label="Filter by Date"
                 size="small"
-                slotProps={{ textField: { size: 'small', borderRadius:"20px" } }}
+                sx={{
+                  "& .css-1jbm0op-MuiInputBase-root-MuiOutlinedInput-root": {
+                    borderRadius: "20px",
+                  }
+                }}
+                slotProps={{ textField: { size: 'small' }, style:{borderRadius:"20px"} }}
               />
             </Stack>
             <PatientTable />
