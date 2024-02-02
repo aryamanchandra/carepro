@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <Box sx={{ backgroundColor: "#F1F8FF", padding: "20px" }}>
       <Stack direction="row" marginBottom="30px">
-        <Typography variant="h6" color="primary.light">
+        <Typography color="primary.light" sx={{fontSize:"20px", fontWeight:"500"}}>
           Dashboard
         </Typography>
         <Button startIcon={<NotificationsIcon />} sx={{ marginLeft: "auto" }} />

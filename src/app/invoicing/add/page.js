@@ -57,9 +57,9 @@ export default function Add() {
     return acc + parseFloat(curr.cost) * parseFloat(curr.qty);
   }, 0);
 
-  const discount = 52
-  const taxfee = 52
-  const total = Math.round(subtotal*(1-discount/100)+taxfee).toFixed(2)
+  const discount = 52;
+  const taxfee = 52;
+  const total = Math.round(subtotal * (1 - discount / 100) + taxfee).toFixed(2);
 
   const handleItemChange = (index, key, value) => {
     const newItems = [...items];
@@ -83,7 +83,7 @@ export default function Add() {
       </Stack>
       <Link href="/patients">
         <Button
-          sx={{ marginBottom: "20px", color: "#3497F9" }}
+          sx={{ marginBottom: "20px", color: "#3497F9", textTransform:"capitalize" }}
           startIcon={<ArrowBackIosIcon />}
         >
           Go Back to Invoices
@@ -113,7 +113,8 @@ export default function Add() {
               boxShadow: "none",
               py: 1,
               px: 3,
-              borderRadius: "5px",
+              borderRadius: "8px",
+              textTransform:"capitalize"
             }}
           >
             Print
@@ -126,7 +127,8 @@ export default function Add() {
               boxShadow: "none",
               py: 1,
               px: 3,
-              borderRadius: "5px",
+              borderRadius: "8px",
+              textTransform:"capitalize"
             }}
           >
             Save
@@ -399,6 +401,8 @@ export default function Add() {
                     marginRight: "auto",
                     padding: "15px",
                     color: "#3497F9",
+                    textTransform:"capitalize",
+                    borderRadius:"8px",
                   }}
                   startIcon={<AddIcon />}
                   onClick={addItem}
@@ -409,22 +413,50 @@ export default function Add() {
             </Box>
           </Grid>
           <Grid item xs={4} sx={{ padding: "20px" }}>
-            <Typography sx={{ marginTop: "20px" }}>Payment Summary</Typography>
+            <Typography
+              sx={{ marginTop: "20px", fontSize: "14px", fontWeight: "600" }}
+            >
+              Payment Summary
+            </Typography>
             <Stack direction="row" sx={{ paddingY: "20px", paddingX: "20px" }}>
-              <Typography variant="h6">Sub total</Typography>
-              <Typography variant="h6" sx={{ marginLeft: "auto" }}>
+              <Typography
+                variant="h6"
+                sx={{ fontSize: "16px", fontWeight: "500" }}
+              >
+                Sub total
+              </Typography>
+              <Typography
+                variant="h6"
+                sx={{ marginLeft: "auto", fontSize: "16px", fontWeight: "500" }}
+              >
                 ${subtotal}
               </Typography>
             </Stack>
             <Stack direction="row" sx={{ paddingY: "20px", paddingX: "20px" }}>
-              <Typography variant="h6">Discount (20%)</Typography>
-              <Typography variant="h6" sx={{ marginLeft: "auto" }}>
+              <Typography
+                variant="h6"
+                sx={{ fontSize: "16px", fontWeight: "500" }}
+              >
+                Discount (20%)
+              </Typography>
+              <Typography
+                variant="h6"
+                sx={{ marginLeft: "auto", fontSize: "16px", fontWeight: "500" }}
+              >
                 ${discount}
               </Typography>
             </Stack>
             <Stack direction="row" sx={{ paddingY: "20px", paddingX: "20px" }}>
-              <Typography variant="h6">Tax fee</Typography>
-              <Typography variant="h6" sx={{ marginLeft: "auto" }}>
+              <Typography
+                variant="h6"
+                sx={{ fontSize: "16px", fontWeight: "500" }}
+              >
+                Tax fee
+              </Typography>
+              <Typography
+                variant="h6"
+                sx={{ marginLeft: "auto", fontSize: "16px", fontWeight: "500" }}
+              >
                 ${taxfee}
               </Typography>
             </Stack>
@@ -436,8 +468,16 @@ export default function Add() {
                 backgroundColor: "#F8FAFC",
               }}
             >
-              <Typography variant="h6">Grand Total</Typography>
-              <Typography variant="h6" sx={{ marginLeft: "auto" }}>
+              <Typography
+                variant="h6"
+                sx={{ fontSize: "16px", fontWeight: "700" }}
+              >
+                Grand Total
+              </Typography>
+              <Typography
+                variant="h6"
+                sx={{ marginLeft: "auto", fontSize: "16px", fontWeight: "700" }}
+              >
                 ${total}
               </Typography>
             </Stack>

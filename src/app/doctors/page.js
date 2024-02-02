@@ -211,7 +211,8 @@ export default function Patients() {
               backgroundColor: "#3497F9",
               boxShadow: "none",
               py: 1,
-              borderRadius: "5px",
+              borderRadius: "8px",
+              textTransform:"capitalize"
             }}
             onClick={handleOpen}
           >

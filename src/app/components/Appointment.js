@@ -46,9 +46,13 @@ export default function BasicTabs() {
   return (
     <Box sx={{ width: '100%' }}>
       <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-        <Tabs value={value} onChange={handleChange} textColor="#3497F9">
-          <Tab label="IPD APPOINTMENTS" {...a11yProps(0)} sx={{color:"#3497F9 !important"}} />
-          <Tab label="OPD APPOINTMENTS" {...a11yProps(1)} sx={{color:"#3497F9"}}/>
+        <Tabs value={value} onChange={handleChange} textColor="#242222" sx={{
+          "& .css-rf1nho-MuiTabs-indicator":{
+            backgroundColor:"#3497F9"
+          }
+        }}>
+          <Tab label="IPD APPOINTMENTS" {...a11yProps(0)} sx={{color:"#242222 !important"}} />
+          <Tab label="OPD APPOINTMENTS" {...a11yProps(1)} sx={{color:"#242222"}}/>
         </Tabs>
       </Box>
       <CustomTabPanel value={value} index={0}>

@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, Button, Stack,styled } from "@mui/material";
+import { Box, Button, Stack, styled } from "@mui/material";
 import Image from "next/image";
 import LogoutIcon from "@mui/icons-material/Logout";
 import SettingsIcon from "@mui/icons-material/Settings";
@@ -10,9 +10,10 @@ import SupervisorAccountIcon from "@mui/icons-material/SupervisorAccount";
 import SpeedIcon from "@mui/icons-material/Speed";
 import DoctorIcon from "./DoctorIcon";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
 
 const SidebarButton = styled(Button)({
-  textTransform:"capitalize",
+  textTransform: "capitalize",
   "&:hover": {
     backgroundColor: "#efefef !important",
   },
@@ -20,13 +21,13 @@ const SidebarButton = styled(Button)({
 
 export default function Home() {
   const router = useRouter();
+  const [activeButton, setActiveButton] = useState(null);
 
-  const handlePatient = () => (router.push("/patients"))
-  const handleDashboard = () => (router.push("/"))
-  const handleDoctor = () => (router.push("/doctors"))
-  const handleInvoice = () => (router.push("/invoicing"))
-  const handleInventory = () => (router.push("/inventory"))
-  
+  const handleButtonClick = (targetRoute) => {
+    router.push(targetRoute);
+    setActiveButton(targetRoute);
+  };
+
   return (
     <Stack
       direction="column"
@@ -55,18 +56,62 @@ export default function Home() {
           marginRight="auto"
         />
       </Box>
-      <SidebarButton startIcon={<SpeedIcon />} onClick={handleDashboard}>Dashboard</SidebarButton>
+      <SidebarButton
+        startIcon={<SpeedIcon />}
+        onClick={() => handleButtonClick("/")}
+        sx={{
+          color: activeButton === "/" ? "#3497F9" : "efefef",
+        }}
+      >
+        Dashboard
+      </SidebarButton>
       <SidebarButton
         startIcon={<SupervisorAccountIcon />}
-        onClick={handlePatient}
+        onClick={() => handleButtonClick("/patients")}
+        sx={{
+          color:
+            activeButton === "/patients" ? "#3497F9" : "efefef",
+        }}
       >
         Patients
       </SidebarButton>
-      <SidebarButton startIcon={<DoctorIcon />} onClick={handleDoctor}>Doctors</SidebarButton>
-      <SidebarButton startIcon={<ReceiptLongIcon />} onClick={handleInvoice}>Invoicing</SidebarButton>
-      <SidebarButton startIcon={<ArchiveIcon />} onClick={handleInventory}>Inventory</SidebarButton>
+      <SidebarButton
+        startIcon={<DoctorIcon />}
+        onClick={() => handleButtonClick("/doctors")}
+        sx={{
+          color:
+            activeButton === "/doctors" ? "#3497F9" : "efefef",
+        }}
+      >
+        Doctors
+      </SidebarButton>
+      <SidebarButton
+        startIcon={<ReceiptLongIcon />}
+        onClick={() => handleButtonClick("/invoicing")}
+        sx={{
+          color:
+            activeButton === "/invoicing" ? "#3497F9" : "efefef",
+        }}
+      >
+        Invoicing
+      </SidebarButton>
+      <SidebarButton
+        startIcon={<ArchiveIcon />}
+        onClick={() => handleButtonClick("/inventory")}
+        sx={{
+          color:
+            activeButton === "/inventory" ? "#3497F9" : "efefef",
+        }}
+      >
+        Inventory
+      </SidebarButton>
       <SidebarButton startIcon={<SettingsIcon />}>Settings</SidebarButton>
-      <SidebarButton startIcon={<LogoutIcon />} sx={{ marginTop: "auto" }}>
+      <SidebarButton
+        startIcon={<LogoutIcon />}
+        sx={{
+          marginTop: "auto",
+        }}
+      >
         Logout
       </SidebarButton>
     </Stack>

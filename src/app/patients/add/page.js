@@ -74,7 +74,7 @@ export default function Add() {
       </Stack>
       <Link href="/patients">
         <Button
-          sx={{ marginBottom: "20px", color: "#3497F9" }}
+          sx={{ marginBottom: "20px", color: "#3497F9", textTransform:"capitalize" }}
           startIcon={<ArrowBackIosIcon />}
         >
           Go Back to Patients
@@ -103,7 +103,8 @@ export default function Add() {
               boxShadow: "none",
               py: 1,
               px: 3,
-              borderRadius: "5px",
+              borderRadius: "8px",
+              textTransform:"capitalize"
             }}
           >
             Save
